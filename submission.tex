@@ -1,0 +1,183 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+
+\titleformat{\section}{\normalfont\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.4ex plus .3ex}{0.6ex}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55ex}
+\captionsetup{font=small,labelfont=bf}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\small\itshape AI-generated reference solution, not for submission}
+\rfoot{\small\thepage}
+
+\newcommand{\vb}[1]{\vec{#1}}
+\newcommand{\A}{\text{\AA}}
+\newcommand{\iA}{\text{\AA}^{-1}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries MATE70020 Problem Set 2}\\[0.6ex]
+Name / CID: [placeholder]\\
+10 November 2026
+\end{center}
+
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\bfseries
+AI NOTICE: This document was generated entirely by an AI agent (Claude Code, Claude Opus 5.5, 10 November 2026) for comparison purposes only. All calculations, figures and text are AI-produced. It is not a student submission and must not be submitted for assessment.}}
+
+%---------------------------------------------------------------------------
+\section*{(a) Why the $6\times6\times1$ grid has no $k$-points along $z$}
+
+Quantum ESPRESSO uses periodic boundary conditions in all three directions, so BN.in repeats the single
+hBN sheet along $z$ with period $c = 20.0~\A$ ($\vb a_3 = c\,\hat{\vb z}$). Each sheet is therefore separated from its
+(artificial) periodic images by about $20~\A$ of vacuum, just like the isolated N$_2$ molecule in a box in Lecture~3.
+The Kohn--Sham orbitals of neighbouring sheets do not overlap across this vacuum, so the occupied KS energies
+$\varepsilon_{n\vb k}$ do not depend on $k_z$: the bands are flat along $k_z$ and every $k_z$ contributes the same
+amount to the density $n(\vb r)=\sum_n\sum_{\vb k}|\psi_{n\vb k}(\vb r)|^2$ (Lecture~4). A single $k_z$ value ($k_z=0$)
+therefore samples the Brillouin zone exactly along $z$, and the $k$-grid only has to be converged in the plane of the sheet,
+where the material is really periodic. Equivalently, the zone is very thin along $z$: $|\vb b_3| = 2\pi/c = 0.314~\iA$,
+9.2 times shorter than $|\vb b_1| = 2.897~\iA$ (part b).
+Check: the occupied KS energies at $k_z=\pi/c$ (at $\Gamma$ and $K$) differ from those at $k_z=0$ by less than $0.01$~eV,
+whereas band 4 disperses by 3.6~eV in the plane.
+
+%---------------------------------------------------------------------------
+\section*{(b) Primitive lattice vectors and reciprocal lattice vectors}
+
+For \texttt{ibrav = 4} (hexagonal) the INPUT\_PW documentation [1] gives, in Cartesian coordinates,
+$\vb a_1 = a(1,0,0)$, $\vb a_2 = a(-\tfrac12,\tfrac{\sqrt3}{2},0)$, $\vb a_3 = a(0,0,\tfrac ca)$.
+In BN.in, \texttt{A} and \texttt{C} are lengths in \AA\ [1], so $a = 2.504~\A$ and $c = 20.0~\A$:
+\[
+\vb a_1 = (2.504,\,0,\,0)~\A,\qquad \vb a_2 = (-1.252,\,2.169,\,0)~\A,\qquad \vb a_3 = (0,\,0,\,20.0)~\A .
+\]
+The reciprocal vectors follow from $\vb a_i\cdot\vb b_j = 2\pi\delta_{ij}$, i.e.\ $\vb b_1 = 2\pi\,\vb a_2\times\vb a_3/V$ (cyclic), with
+$V=\vb a_1\cdot(\vb a_2\times\vb a_3)$ (Lecture~4):
+\begin{align*}
+\vb a_2\times\vb a_3 &= ac\,(\tfrac{\sqrt3}{2},\tfrac12,0), \quad
+\vb a_3\times\vb a_1 = ac\,(0,1,0), \quad
+\vb a_1\times\vb a_2 = a^2\,(0,0,\tfrac{\sqrt3}{2}), \quad
+V = \tfrac{\sqrt3}{2}a^2c = 108.60~\A^3,\\
+\vb b_1 &= \frac{2\pi}{a}\Big(1,\tfrac{1}{\sqrt3},0\Big),\qquad
+\vb b_2 = \frac{2\pi}{a}\Big(0,\tfrac{2}{\sqrt3},0\Big),\qquad
+\vb b_3 = \frac{2\pi}{c}\,(0,0,1).
+\end{align*}
+With $2\pi/a = 2.5093~\iA$ and $2\pi/c = 0.31416~\iA$:
+\[
+\vb b_1 = (2.5093,\,1.4487,\,0)~\iA,\qquad \vb b_2 = (0,\,2.8974,\,0)~\iA,\qquad \vb b_3 = (0,\,0,\,0.3142)~\iA ,
+\]
+so $|\vb b_1| = |\vb b_2| = 4\pi/(\sqrt3 a) = 2.8974~\iA$ at $60^\circ$ to each other (a hexagonal reciprocal lattice).
+Check: e.g.\ $\vb a_2\cdot\vb b_1 = 2\pi(-\tfrac12+\tfrac{\sqrt3}{2}\tfrac{1}{\sqrt3}) = 0$, $\vb a_2\cdot\vb b_2 = 2\pi$; numerically
+$\vb a_i\cdot\vb b_j = 2\pi\delta_{ij}$ to $10^{-15}$.
+In units of $2\pi/a$ these are $(1, 0.57735, 0)$, $(0, 1.15470, 0)$ and $(0, 0, 0.12520)$, identical to the reciprocal axes printed by \texttt{pw.x}.
+
+%---------------------------------------------------------------------------
+\section*{(c) $K$ and $M$ in terms of the primitive reciprocal lattice vectors}
+
+The first Brillouin zone is the region closer to $\vb G=0$ than to any other $\vb G$ (Lecture~4). Its boundary is
+formed by the perpendicular bisectors of the six shortest $\vb G$: $\pm\vb b_1$, $\pm\vb b_2$, $\pm(\vb b_2-\vb b_1)$, all of
+length $|\vb b_1|$.
+
+\textbf{M (middle of a side).} The side belonging to $\vb b_1$ is its perpendicular bisector, and its midpoint is where it crosses the
+line from $\Gamma$ to $\vb b_1$:
+$\vb k_M = \tfrac12\vb b_1$, i.e.\ crystal coordinates $(\tfrac12,0,0)$.
+
+\textbf{K (corner).} A corner is where the sides belonging to $\vb b_1$ and $\vb b_2$ meet, so it is equidistant from $\Gamma$,
+$\vb b_1$ and $\vb b_2$. Write $\vb k_K = x\vb b_1 + y\vb b_2$ and use $|\vb b_1|^2=|\vb b_2|^2\equiv B^2$, $\vb b_1\cdot\vb b_2 = B^2/2$:
+\[
+|\vb k_K| = |\vb k_K-\vb b_1| \Rightarrow 2\vb k_K\cdot\vb b_1 = B^2 \Rightarrow 2x + y = 1,\qquad
+|\vb k_K| = |\vb k_K-\vb b_2| \Rightarrow x + 2y = 1,
+\]
+so $x=y=\tfrac13$: $\vb k_K = \tfrac13\vb b_1 + \tfrac13\vb b_2$, crystal coordinates $(\tfrac13,\tfrac13,0)$. $\Gamma$ is $(0,0,0)$.
+
+\textbf{Check in Cartesian coordinates.}
+\[
+\vb k_K = \tfrac{2\pi}{a}\big(\tfrac13,\tfrac{1}{\sqrt3},0\big) = (0.8364,\,1.4487,\,0)~\iA,\qquad
+\vb k_M = \tfrac{2\pi}{a}\big(\tfrac12,\tfrac{1}{2\sqrt3},0\big) = (1.2546,\,0.7244,\,0)~\iA,
+\]
+giving $|\Gamma K| = 4\pi/(3a) = 1.6728~\iA$, $|\Gamma M| = 2\pi/(\sqrt3a) = 1.4487~\iA$ and $|KM| = 2\pi/(3a) = 0.8364~\iA$.
+For a regular hexagon the corner distance equals the side length $s$, and the distance to the middle of a side is $\tfrac{\sqrt3}{2}s$.
+Here $|\Gamma M|/|\Gamma K| = \sqrt3/2$ and $|KM| = \tfrac12|\Gamma K|$, so $M$ is the midpoint of the side starting at $K$
+(the side running to $K' = (\tfrac23,-\tfrac13,0)$), as in the sketch on the problem sheet. A numerical search over $\vb G$ also confirms
+that $K$ is equidistant from 3 nearest $\vb G$ (a corner) and $M$ from 2 (a side midpoint).
+
+%---------------------------------------------------------------------------
+\section*{(d) Band structure of monolayer hBN}
+
+\textbf{Method.} Quantum ESPRESSO 7.6 [3], LDA (Perdew--Zunger) pseudopotentials as supplied.
+(1)~SCF with BN.in \emph{unchanged} ($E_\text{cut}=60$~Ry, $6\times6\times1$ grid, \texttt{nbnd = 8}). It converged in 7 iterations
+(estimated SCF accuracy $3\times10^{-7}$~Ry, below the default $10^{-6}$~Ry), with $E_\text{tot} = -25.77488$~Ry.
+(2)~A non-self-consistent run on that SCF density. The only changes to BN.in are \texttt{calculation = 'bands'} and
+\texttt{K\_POINTS crystal\_b} with $\Gamma\,(0,0,0)$~60, $K\,(\tfrac13,\tfrac13,0)$~30, $M\,(\tfrac12,0,0)$~1.
+This gives 91 $k$-points with equal spacing ($0.028~\iA$, since $|\Gamma K| = 2|KM|$).
+(3)~Post-processing with \texttt{bands.x}.
+
+\textbf{Occupied bands.} The pseudopotentials have $Z_\text{val} = 3$ (B) and $5$ (N), so there are 8 valence electrons per cell.
+In a spin-unpolarised calculation each band holds 2 electrons, so bands 1--4 are occupied and bands 5--8 are empty.
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[c]{0.56\textwidth}
+\includegraphics[width=\linewidth]{runs/bands.pdf}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.41\textwidth}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\multicolumn{2}{@{}l}{\textbf{(b)} $a = 2.504~\A$, $c = 20.0~\A$}\\
+$\vb b_1$ & $(2.509,\,1.449,\,0)~\iA$\\
+$\vb b_2$ & $(0,\,2.897,\,0)~\iA$\\
+$\vb b_3$ & $(0,\,0,\,0.314)~\iA$\\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{(c)} crystal coordinates}\\
+$\Gamma$, $K$, $M$ & $(0,0,0)$, $(\tfrac13,\tfrac13,0)$, $(\tfrac12,0,0)$\\
+$|\Gamma K|$, $|\Gamma M|$ & $1.673~\iA$, $1.449~\iA$\\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{(d)} 8 valence $e^-$, 4 occupied bands}\\
+VBM, CBM & both at $K$\\
+$E_g$ (LDA) & 4.55~eV, direct at $K$\\
+$E_g$ (expt.\ [2]) & 6.1~eV, direct\\
+difference & $-1.55$~eV ($-25\%$)\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\caption{Left: LDA Kohn--Sham band structure of monolayer hBN along $\Gamma$--$K$--$M$ (path to scale:
+$|\Gamma K| = 1.673~\iA$, $|KM| = 0.836~\iA$). Energies are relative to the valence-band maximum. Solid blue: occupied bands 1--4;
+dashed orange: unoccupied bands 5--8; shading: band gap. Right: numerical results for (b)--(d).}
+\end{figure}
+
+\textbf{Result.} The valence-band maximum (top of band 4) and the conduction-band minimum (bottom of band 5) are both at $K$.
+\textbf{hBN therefore has a direct band gap at $K$, $E_g = \varepsilon_{5,K}-\varepsilon_{4,K} = 0.207 - (-4.343) = 4.55$~eV.}
+Elsewhere on the path the gap is larger: 5.58~eV at $M$ and 6.19~eV at $\Gamma$.
+A 3$\times$ denser path (271 $k$-points) and a fine path within $0.17~\iA$ of $K$ (201 $k$-points) give the same location and the same gap (4.55~eV).
+
+\textbf{Comparison with experiment.} The measured gap of monolayer hBN is 6.1~eV, and it is also direct [2]. LDA reproduces the
+direct character but underestimates the gap by 1.55~eV ($\approx 25\%$). This is the known failure discussed in Lecture~3:
+LDA (and GGAs) work well for structural, elastic and vibrational properties but are inaccurate for band gaps of solids, and
+semi-local functionals systematically underestimate them. Two reasons are relevant here. First, the KS energies are eigenvalues of the
+fictitious non-interacting system, not true excitation energies (Lecture~2). Second, LDA takes $\epsilon_{xc}$ from the
+homogeneous electron gas, evaluated locally. Its approximate exchange does not cancel the spurious interaction of each electron with its own density,
+which is contained in the Hartree term. Exact (Hartree--Fock) exchange cancels this self-interaction. Hybrid functionals such as PBE0 replace 25\% of the
+semi-local exchange by Hartree--Fock exchange, which opens the gap towards experiment, but they are roughly an order of magnitude more expensive.
+
+%---------------------------------------------------------------------------
+\section*{References}
+\small
+[1] Quantum ESPRESSO, \emph{Input File Description, Program pw.x} (INPUT\_PW): entries \texttt{ibrav}, \texttt{A}/\texttt{C},
+\texttt{K\_POINTS}; \url{https://www.quantum-espresso.org/Doc/INPUT_PW.html} (accessed 10 Nov 2026).\\
+{[2]} C.~Elias, P.~Valvin, T.~Pelini, A.~Summerfield, C.~J.~Mellor, T.~S.~Cheng, L.~Eaves, C.~T.~Foxon, P.~H.~Beton, S.~V.~Novikov,
+B.~Gil, G.~Cassabois, ``Direct band-gap crossover in epitaxial monolayer boron nitride'', \emph{Nat.\ Commun.} \textbf{10}, 2639 (2019),
+doi:10.1038/s41467-019-10610-5.\\
+{[3]} P.~Giannozzi \emph{et al.}, \emph{J.\ Phys.: Condens.\ Matter} \textbf{29}, 465901 (2017).
+
+\end{document}

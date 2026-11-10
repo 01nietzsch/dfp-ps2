@@ -1,0 +1,56 @@
+== (b) real and reciprocal lattice ==
+a = 2.504 A = 4.7319 bohr ; c = 20.0 A ; V = a1.(a2 x a3) = sqrt3/2 a^2 c = 108.5999 A^3 (= 732.8682 bohr^3)
+  a1 = ( 2.50400,  0.00000,  0.00000) A
+  a2 = (-1.25200,  2.16853,  0.00000) A
+  a3 = ( 0.00000,  0.00000,  20.00000) A
+  b1 = ( 2.50926,  1.44872, -0.00000) 1/A   |b1| = 2.89744 1/A   in 2pi/a units: (1.000000, 0.577350, -0.000000)
+  b2 = ( 0.00000,  2.89744,  0.00000) 1/A   |b2| = 2.89744 1/A   in 2pi/a units: (0.000000, 1.154701, 0.000000)
+  b3 = ( 0.00000, -0.00000,  0.31416) 1/A   |b3| = 0.31416 1/A   in 2pi/a units: (0.000000, -0.000000, 0.125200)
+  analytic: 2pi/a = 2.50926 1/A, 4pi/(sqrt3 a) = 2.89744 1/A, 2pi/c = 0.31416 1/A
+  a_i . b_j / 2pi =
+[[ 1.  0.  0.]
+ [-0.  1.  0.]
+ [ 0.  0.  1.]]
+  CHECK a_i.b_j = 2pi delta_ij : max deviation = 8.88e-16  -> PASS
+  angle(b1,b2) = 60.0000 deg (hexagonal reciprocal lattice)
+  CHECK vs pw.x 'reciprocal axes' (2pi/alat): max deviation = 4.6e-07 -> PASS
+
+== (c) high-symmetry points ==
+  G: crystal [0. 0. 0.]  ->  Cartesian (0.00000, 0.00000, 0.00000) 1/A = (0.000000, 0.000000, 0) 2pi/a
+  K: crystal [0.33333333 0.33333333 0.        ]  ->  Cartesian (0.83642, 1.44872, 0.00000) 1/A = (0.333333, 0.577350, 0) 2pi/a
+  M: crystal [0.5 0.  0. ]  ->  Cartesian (1.25463, 0.72436, 0.00000) 1/A = (0.500000, 0.288675, 0) 2pi/a
+  |GK| = 1.67284 1/A  (analytic 4pi/(3a)      = 1.67284)
+  |GM| = 1.44872 1/A  (analytic 2pi/(sqrt3 a) = 1.44872)
+  |KM| = 0.83642 1/A  (analytic 2pi/(3a)      = 0.83642)
+  CHECK hexagon geometry (|GK|=edge, |KM|=edge/2, |GM|=sqrt3/2 edge=|b1|/2): max dev = 2.2e-16 -> PASS
+  K: distance to Gamma = 1.67284, min distance to any G = 1.67284, number of equidistant nearest G = 3 -> corner
+  M: distance to Gamma = 1.44872, min distance to any G = 1.44872, number of equidistant nearest G = 2 -> edge midpoint
+
+== (d) band structure ==
+  valence electrons: B 3 + N 5 = 8 per cell -> occupied bands = 8/2 = 4 (nbnd = 8 -> 4 empty bands)
+  main path (91 k): VBM = -4.3434 eV at K, CBM = 0.2070 eV at K
+  gap = 4.5504 eV, DIRECT
+  at G: band 4 = -1.3982 eV, band 5 =  4.7930 eV (relative to VBM); direct gap 6.1912 eV
+  at K: band 4 =  0.0000 eV, band 5 =  4.5504 eV (relative to VBM); direct gap 4.5504 eV
+  at M: band 4 = -0.9278 eV, band 5 =  4.6514 eV (relative to VBM); direct gap 5.5792 eV
+  occupied bandwidth (band 1 min to VBM) = 17.562 eV
+  experiment 6.1 eV (Elias et al., Nat. Commun. 10, 2639 (2019)): LDA gap is 1.55 eV lower = 25% underestimate (ratio 0.75)
+
+  -- gap-location checks --
+  dense (3x) path (271 k): VBM -4.3434 eV at K, CBM 0.2070 eV at K, gap 4.5504 eV
+     band-4 maximum exceeds its value at K by 0.00 meV; band-5 minimum at K; gap at K = 4.5504 eV
+  fine path within 10-20% of K (201 k): VBM -4.3431 eV at (0.3337,0.3327,0.0000), CBM 0.2070 eV at K, gap 4.5501 eV
+     band-4 maximum exceeds its value at K by 0.24 meV; band-5 minimum at K; gap at K = 4.5504 eV
+  SCF 6x6x1 grid (contains K): HOMO -4.3395 eV, LUMO 0.2051 eV -> gap 4.5446 eV (difference to bands run 6 meV: default conv_thr)
+  CHECK bands.x .gnu vs pw.x XML eigenvalues: max |diff| = 5.0e-05 eV
+
+== (a) k_z check: eigenvalues at k_z = 0 vs k_z = pi/c (= b3/2) ==
+  Gamma vs A: occupied bands 1-4 shift [-0.  -4.5 -5.1 -5.1] meV; empty bands 5-8 shift [   1.  -61.  215. -387.] meV
+  K vs H: occupied bands 1-4 shift [0.1 1.3 1.9 8.6] meV; empty bands 5-8 shift [1. 0. 2. 1.] meV
+  max occupied-band shift along k_z = 8.6 meV (in-plane: band 4 varies by 3.59 eV along G-K-M)
+  |b3| = 2pi/c = 0.3142 1/A vs |b1| = 2.8974 1/A (ratio 9.2)
+
+== numerical sanity check at ecutwfc = 120 Ry (NOT used for reported numbers) ==
+  near-K path: VBM at K, CBM at K; band-4 max - band-4(K) = 0.000 meV; gap at K = 4.5779 eV
+  max occupied-band shift k_z=0 -> pi/c: 0.013 meV
+  => the sub-meV VBM offset near K and the few-meV k_z shifts at 60 Ry are plane-wave-basis noise.

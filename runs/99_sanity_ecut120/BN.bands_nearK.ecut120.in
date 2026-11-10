@@ -1,0 +1,26 @@
+&CONTROL
+   calculation = 'bands'
+   pseudo_dir = './'
+/
+&SYSTEM
+   ibrav = 4
+   A = 2.504
+   C = 20.0
+   nat = 2
+   ntyp = 2
+   ecutwfc = 120.0
+   nbnd = 8
+/
+&ELECTRONS
+/
+ATOMIC_SPECIES
+  B 10.806  B.pz-vbc.UPF
+  N 14.006  N.pz-vbc.UPF
+ATOMIC_POSITIONS crystal
+B  0.0000000000 0.0000000000 0.25
+N  0.3333333333 0.6666666666 0.25
+K_POINTS crystal_b
+3
+0.3000000000 0.3000000000 0.0  100  ! 0.9 K (on Gamma-K)
+0.3333333333 0.3333333333 0.0  100  ! K
+0.3666666667 0.2666666667 0.0   1  ! K + 0.2 (M-K) (on K-M)
