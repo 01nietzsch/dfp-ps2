@@ -1,0 +1,5 @@
+  elpa               2026.02.002   mpi_openmpi_h33b1e68_2    conda-forge
+  fftw               3.3.11        nompi_h3b011a4_100        conda-forge
+  libopenblas        0.3.34        openmp_h156ec52_2         conda-forge
+  openmpi            5.0.11        hee33aa4_0                conda-forge
+  qe                 7.6           mpi_openmpi_hdb26816_104  conda-forge

@@ -1,0 +1,22 @@
+&CONTROL
+   pseudo_dir = './'
+/
+&SYSTEM
+   ibrav = 4
+   A = 2.504
+   C = 20.0
+   nat = 2
+   ntyp = 2
+   ecutwfc = 120.0
+   nbnd = 8
+/
+&ELECTRONS
+/
+ATOMIC_SPECIES
+  B 10.806  B.pz-vbc.UPF
+  N 14.006  N.pz-vbc.UPF
+ATOMIC_POSITIONS crystal
+B  0.0000000000 0.0000000000 0.25
+N  0.3333333333 0.6666666666 0.25
+K_POINTS automatic
+6 6 1 0 0 0 

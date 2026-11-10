@@ -1,0 +1,5 @@
+&BANDS
+   prefix = 'pwscf'
+   outdir = './'
+   filband = 'BN.bands.dat'
+/
