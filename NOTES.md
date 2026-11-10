@@ -6,7 +6,7 @@
 
 | File | What it is |
 |---|---|
-| `submission.pdf` / `submission.tex` | The 3-page answer (a)–(d), with AI notice box and footer on every page |
+| `submission.pdf` / `submission.tex` | The 3-page answer (a)–(d), with AI notice box and footer on every page. The LaTeX follows the user's PSet 1 template: siunitx units, `\maketitle`, a Method section with a footnote link to the runs, and labelled, cross-referenced tables and figure. Kept on top of that template: the AI notice, the footer and the Name/CID placeholder |
 | `runs/BN.in`, `runs/*.UPF` | Byte-identical copies of the course files (`cmp` checked). The originals in the repo root are untouched |
 | `runs/BN.bands.in` | Main band-structure input (Γ–K–M, 91 k-points) |
 | `runs/BN.bands_dense.in`, `runs/BN.bands_nearK.in` | Gap-location checks (271 k-points on the full path; 201 k-points within 0.17 Å⁻¹ of K) |
