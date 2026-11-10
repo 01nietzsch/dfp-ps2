@@ -1,0 +1,1353 @@
+[Transcription générée automatiquement. Des modifications ont pu être apportées pour plus de clarté.]
+Right. And then we wrote out this, um, persi um, the periodicity of Persi.
+
+But next lecture, we are going to do this for a periodic solid.
+
+And there we are going to see that this condition actually doesn't, uh, is not satisfied, not satisfied for solids.
+
+And basically we will, um, see how we can rewrite this formulation for solids and then go through this again, how to do the Fourier expansion.
+
+And you will see that how can we arrive at an equation like this for periodic solids which is slightly more complicated.
+
+Okay. Great. Um, with that let's take another ten minutes break.
+
+And when we are back we will do the last three which is on convergence test.
+
+So you will take a look at this, for example the energy Cut-Off and how that influences the DFT results.
+
+Okay. So we can achieve G.
+
+G. G.
+
+You know that. You love the idea of delta harmonic.
+
+Uh, I g. Right.
+
+Thus taking the first ever two. Hours at all.
+
+I swear I did all, Norma. I'll do the food.
+
+Oh, Fuji! Oh! Oh! Oh!
+
+Oh! Same here. Notation.
+
+Is your summation summing over the.
+
+Summation. So. So like.
+
+Like like devil Tommy would cross terms. Stumbling over the lattice factors.
+
+Lattice factors that sparks a factor whereby inside.
+
+Your you go. How do you.
+
+Where n is integer. Right. So a set of vectors are the.
+
+Reciprocal ladders. So you go.
+
+Reciprocal. Artist vector. Summation.
+
+Summing over a reciprocal vector. Is like a cross multiplication.
+
+Over the. Double prime.
+
+How did you. Tell me. When you gave out.
+
+Oh. I don't know.
+
+Oh, you don't call me. Jason.
+
+This. Is the eigenvalue problem.
+
+Because we. Are what are.
+
+Called. High.
+
+Density. Density. Okay.
+
+Yeah. You sure? Yeah.
+
+You got. You got.
+
+You got. Yeah. Yeah. Yeah, yeah.
+
+I guess. Oh, yeah.
+
+The other called the. Atom density.
+
+Density. Could be anything.
+
+There should also. Be a reasonable.
+
+Neutral. Density.
+
+Gas field and natural gas. Are.
+
+Yeah. Okay.
+
+Okay. Okay.
+
+Yeah. I mean, it's a big step up. Right. It's, uh. Yeah. Yeah.
+
+So is this the one where you, um, project the code into plain white?
+
+Yes. Yeah. Yeah. Well. I mean, it was cute.
+
+Is it? Yeah. No, this is a I. I think this is one of the harder, uh, lectures, but next one is even more difficult, I think.
+
+Oh. Did it. It's not your problem. Yeah. Like, why did you make it so difficult?
+
+I think, Yeah. So he told me that his mantra was that, uh, the course works usually pretty easy.
+
+So you can get, like, a good chunk of your grade from the coursework, and then the exam is just, like, super difficult, huh?
+
+Um, which, to be fair, I think teaching DFT like, from the ground up is very difficult in ten lectures.
+
+You need the physics. Yeah, you need the like a crystallography and that kind of stuff.
+
+So let's do physics. Yeah. Then you need the numerical methods.
+
+Yeah. Right. Exactly. And then all these practical aspects of the piece.
+
+Yeah. Yeah. It is. That's why it's so super difficult.
+
+Yeah. Yeah. Hopefully the lab will help her.
+
+So, professor listener actually got it down.
+
+So, uh, he altered them somewhat from the person who was previous to him.
+
+Uh, so it's like a iterative process, much like TF2.
+
+Is like a French ish name. It must have been, like, a long time.
+
+Yeah, he's been teaching it for quite a long time. Yeah.
+
+Okay. You released him?
+
+Yeah. Then this one will need some matrix elements. Oh, right.
+
+I guess. Oh, well. We understand. Sorry. Yeah.
+
+Oh, wow. So you actually show how to get the coefficients as well? Yes.
+
+Oh, damn. Wow. That's rough.
+
+It's in the lecture notes. That's.
+
+And I was like, oh my God, this is a matrix eigenvalue problem.
+
+Maybe some of them don't know what matrix is. So you remember the guessing the coefficients of the.
+
+So these are the coefficients of the periodic parts of the block.
+
+There is another blog theorem here.
+
+Okay. Zimmerman's next lecture which is even more complicated.
+
+Block theorem was first. Yeah. Because all these all these ones generated from Bloch's theorem.
+
+So this is for isolated molecule. Oh where we assume it has the lattice for all this.
+
+Ah. Why did he do the block theorem. His next lecture, which is even more complicated.
+
+Wait, why did he do it this way? That's. That's very difficult.
+
+Okay. I'm not sure why you've done it. He's done it this way.
+
+Because I think doing all this for an isolated molecule is more difficult than doing it for o the serum is more difficult.
+
+I have that also. If you want to see how come I have so many emails.
+
+So if you do. Does he derive theorem? Okay, summarise like this.
+
+Because in Brock's theorem you have an extra algorithm. Yeah, yeah, that's even more difficult.
+
+It's not easier. Okay. And then yeah, I guess you got this one.
+
+Yeah I have an extra. Okay. Okay.
+
+I will make sure not to say block theorem right now then, because my explanation of these proposed parameters using Bloch's theorem.
+
+But I guess it's like a pseudo. Okay. Yeah. It's a simplified word.
+
+Yeah. It's a it's like a translation symmetry in one direction. So you don't need this.
+
+Yeah. So it's like you, you cross out the. Yeah. Yeah.
+
+Yeah. Yeah. Okay. Okay. I do, I do whatever you do.
+
+So I do my best. Yeah. I think these these starting, these starting ones, they've always been very difficult for students.
+
+Um, yeah. Because as you said, it's a blend of, like, needing four different.
+
+You need a, you know, experience in four different fields. Yeah. And I find this point I probably don't remember the matrix exactly.
+
+Yeah. Yeah. So, like, uh, you know, the I like Fourier, uh, Fourier expansion.
+
+Yeah. Yeah. Okay. Let's see, let's see.
+
+So. So have you decided the photon mark? Yeah. So.
+
+Okay. Yeah. I'll mark the first one. I've got the first one.
+
+So. Okay. The the in. Right. The. Oh there's the deadline tomorrow.
+
+Today. Okay. So is is past deadline. Okay.
+
+Okay. So I can start marking. Okay. All right. So. Okay.
+
+Just as a general rule, that's be kind and generous. Yeah.
+
+So unless something is really wrong, then you subtract some mark.
+
+Yeah. And then write some comments. Sure. Very exactly.
+
+It's wrong. Otherwise we just give too much. Okay. Do you have the answers?
+
+Uh, I think they should be on canvas.
+
+Uh, yes. Yes. Yes. Um. Yeah.
+
+How many days do we have to mark from? Two weeks. There are some time.
+
+Yeah. Don't spend too much time.
+
+Okay. Don't you? I don't need you to read every word.
+
+Just try to say, okay? If this is correct, then it's fine. All right.
+
+So. You have Yeah.
+
+Um. All right.
+
+Okay. All right.
+
+And then. I thought I should point out.
+
+Yeah. Yeah. Yeah.
+
+Maybe I should have read a book. I was still paper from them.
+
+I was still paper from them. I said, do you have a pen and paper? Oh, okay.
+
+I mean, you run through the isolation molecule, I'm going to quickly run through the isolated molecule theory.
+
+I'm going to do. This.
+
+With. So, Jeanie, you also need to write the exam.
+
+Right? Yes. Yeah.
+
+Yeah. So I'm not going.
+
+To do that. Right. Now.
+
+Okay. I'll keep.
+
+You updated? On.
+
+And, you know. I think.
+
+That you. Know.
+
+Um. You know, you.
+
+So Yohannes did it like this. Mhm. Um.
+
+Yeah. Three like three prerequisite courses.
+
+Is this like brush up on your Fourier components series?
+
+Yeah. But to be fair it's kind of the same with quantum. That's true. That's true.
+
+We've had um, we've had one student before who did a, um, like an MSC project who didn't like in DFT with Irish but didn't take the DFT course.
+
+I don't know how you do that. I really I don't know what ended up happening.
+
+It is just crazy. But in principle, they select the teams before they meet their supervisor.
+
+That's true. Yes. Way. In terms of like, select the project or select the courses level courses.
+
+Oh, really? That's a weird way. And then you're not.
+
+It's not required to have a meeting with your supervisor before selecting your course.
+
+Because then you can end up with this scenario. Yeah. You might have.
+
+Might be that they go like they're like fourth choice or something. Oh, actually I got my fourth choice when I was picking MSC projects.
+
+Did you do MSE here? No, no, no, I did it at my I did a, um, an integrated master's at my undergrad uni.
+
+Yeah, I wish I did a separate master's though. It would have been better. Really?
+
+The one year MSE here, they don't get much research experience.
+
+Yeah, I think I would do a, do a like a MC uh, zero once with more memories is maybe what I'm thinking.
+
+Yeah. Like a research master's. Um, just because.
+
+Yeah, you get way more like research experience that way, I think. Yeah, yeah.
+
+But actually, I think you don't need to know all of this to do that to you.
+
+Yeah, it's just something nice to know. Yeah. I mean, especially this.
+
+Especially this stuff, like how you get a coefficient so you can kind of brush that under the carpet.
+
+Because you never, ever, ever do anything with these, with these coefficients. You never even see them in the exam.
+
+Absolutely. Really? Oh it's rough.
+
+The exams could be difficult. Well, like you could be asked to reproduce this and calculate a coefficient.
+
+I'm not sure. I'm not sure in what way, but really. I feel like if we went through past papers that were different.
+
+Yeah, there are some. There are some. As a as a PhD student, we don't have that.
+
+We don't have access to view that. View the past exams.
+
+Yeah. Past exams. I may still have access to it.
+
+Why would you want to see them anyways? I want to see if I could do it.
+
+It's difficult. Yeah. Also, um. Yeah, it's.
+
+It's really weird that, like, Imperial don't provide the solutions to pass paper exams.
+
+Oh, yeah. They just provide the, like examiners report. So, like.
+
+Oh, students found it difficult on this question. I have both the exams and the answers from your.
+
+Sold them. Sell them and then make an income which is completely.
+
+Exactly, exactly. To face every question of, like, a tiny niche.
+
+I would. Like to cook and I will do the horse observation next to the lecture.
+
+The course. So I will be observed. Oh. Oh.
+
+That's daunting. Let's see.
+
+Oh, nice. And you got this one. Yeah.
+
+Yeah. All. Right.
+
+You all. Right.
+
+Yeah. I mean.
+
+I have nothing. To.
+
+Do with this. I have.
+
+Done. This.
+
+And. You look.
+
+Around. Thank you.
+
+Come on. Come.
+
+On. Yes.
+
+Yes. Yes. Yes. Yes. Over and over again.
+
+One of those problems. Oh, yes.
+
+Huh? What are you talking about? Uh.
+
+So, um. I guess you only have a bird.
+
+Yeah, yeah, yeah yeah, yeah. Yeah, that's just the.
+
+Way it goes. That I don't know.
+
+I. Don't know.
+
+Yes. Yes. So this is going.
+
+To basically be. Handed over to.
+
+You. And then we are.
+
+Going. To take it.
+
+And so, uh. Yeah.
+
+So this is. How.
+
+You look at how you do.
+
+Oh, okay. So.
+
+Basically, this is good. This is good.
+
+Um. So. Do you think that.
+
+That's great. Um.
+
+Um. Yeah, absolutely. And. Yeah, yeah.
+
+What's going. On.
+
+You really. Haven't.
+
+Um. Well, um. Yeah, yeah, yeah.
+
+I just had the same as Audrey. No more than 50 minutes before.
+
+Oh, wow. Okay. Yeah.
+
+It was really nice. Yeah, it's it's.
+
+I think it's around the next three lectures where people start asking more questions about the people side of things because the the labs.
+
+Yeah. I feel like it's brilliant. Yeah.
+
+Yeah. I remember, yeah.
+
+Yeah. Yeah. Yeah, yeah.
+
+That's what. Yes.
+
+That's what this is.
+
+I think. We.
+
+Just. How do you do that?
+
+What do you say about that? He said. Hey, you.
+
+Know that? So that's why. So there you go.
+
+So you. Know that's one.
+
+Of the things that I don't know.
+
+I. Just. Feel like.
+
+It's like. That's. What?
+
+Okay. Okay. So now I just want you.
+
+To know how to. Do this.
+
+Yeah. Did you hear that? Yeah. Yeah, I think.
+
+So. Huh? Oh, my.
+
+God! Oh my God!
+
+Oh, God. I. Think you.
+
+Know who I am. And I think.
+
+They. Are.
+
+Yeah yeah yeah yeah.
+
+Yeah yeah yeah. Oh.
+
+You did. Yeah, we all do.
+
+That's how we get. Yeah, I think so.
+
+Yeah, yeah. Oh.
+
+Yeah. Oh, yeah. Yeah. Yeah.
+
+Yeah. Yeah yeah yeah yeah.
+
+Yeah yeah. Yeah.
+
+Yeah yeah. Yeah.
+
+Please leave a message. Uh. Yeah, yeah.
+
+Yeah, yeah. Yeah.
+
+Yeah. Yeah. Yeah.
+
+Yeah. Yeah.
+
+Yeah. Yeah yeah yeah.
+
+They have. So.
+
+Uh. Yeah. Oh!
+
+My. God!
+
+Oh my God. I don't know how.
+
+I was able to. Make that.
+
+Oh. Yeah.
+
+Oh, yeah. It's going to be good. To be able to connect to your principles.
+
+On the one hand, you might want to give me.
+
+The. Answer.
+
+Oh, okay. Oh, it's.
+
+Okay. That's good. Yeah.
+
+Can you look at it? Yeah. You were invited to attend today.
+
+Oh, yeah. That's good to know.
+
+I don't know why not? Yeah.
+
+Yeah. Yeah. Yeah.
+
+Yeah, yeah. That was awesome.
+
+Uh, he created a different directory to, like, to, like, test around, but you have to move to suit a potential file as well.
+
+So. Yeah. I don't think.
+
+Yesterday. They have so many questions. Yeah, I think so.
+
+I timed it earlier. One of the task two takes like 15 minutes, just like waiting for the calculations to finish.
+
+So I ran some of them yesterday. But yeah, just like one by one.
+
+Yeah I know, I know.
+
+You know, I was I was very lazy when I was testing and I was writing fresh crystal. And what else?
+
+Do you need? I know that that's fine. By those who do you mean?
+
+Yeah. I love you for that.
+
+Yeah. That's for you. Thank you.
+
+That's. Great.
+
+Oh. Thank you.
+
+All right. Yeah. Yeah. Oh, yeah.
+
+You know? Well, you'd be. Maybe. Yeah.
+
+Did you end up going on a hike or not? No. Um, it was just going to be me changing.
+
+A new day, I think. Oh. Um, but, um, that's that's that's enough.
+
+Actually, I don't know why we didn't have it going. Um, yeah, but I, uh, I made a lunch for, uh, changing Saturday.
+
+I invited him over because he seemed very depressed. He seemed so sad because, uh, I think because of his job.
+
+Yeah, he's just like. He doesn't like. No, no, I think, uh, he misses how, like, close together people can be in academia.
+
+I think when you move to a company, maybe, like, the more professional values come in.
+
+Yeah, exactly. Yeah. Interesting. Just randomly messages me that he misses us.
+
+Yeah. Me too. Yeah. Super cute. Yeah. Because all the time, like, at, like 5 p.m., we go like, oh, where are we going for dinner?
+
+And we all just go out for dinner all the time. But now you go for dinner a lot?
+
+Yeah, a bit too much. Probably giving salaries too much for your budget.
+
+Yeah. We also go hiking on the weekends and stuff. Uh, playing board games on Sundays.
+
+Yeah. Fun. I guess he has just started. Yeah.
+
+Not enough time to make friends. Exactly, exactly. Yeah. Yeah.
+
+I'm like here. He has been here for seven years. Very true.
+
+Very, very natural, though. There is a transition period.
+
+Yeah. Yeah. Yeah. Yeah.
+
+I'm sure the man you would come and do.
+
+Yeah, they they, um, they screwed up his tax code, so they accidentally put him on the, on the higher tax code.
+
+So he got tax on this from this paycheque.
+
+Yeah. So We've got the office. Yes.
+
+Yeah. Yeah. And I think they're moving to Houston Square very soon.
+
+That's also nice. It's a nice area. Yeah, I think similar, similar works not too far away from them.
+
+I think he works in, like, living in the street. He was in a small position.
+
+I think he's a software engineer. I think that's his title. Um, yeah.
+
+He really loves it, which I mean. Great. Great. Yeah.
+
+Oh, Chungcheong wants to move back. I think so.
+
+Yeah, well, he said he gets home from work and, like, he's working on, uh, like he's he's collaborating with other people.
+
+So, like, he comes home from doing science at work, and he does science at home, uh, because he's trying to get some papers out.
+
+I think because he. In order to come back. Oh, well, I guess he is in a rush.
+
+Ah, welcome. Yeah, very. It's just that they don't have the money right now.
+
+Yeah. Yeah. Yeah. I mean, Johannes, Johannes is putting in an elk grove again.
+
+Um, so I think if you got that, then gentlemen would be competitive.
+
+Yeah. You are so competitive, right? Yeah. Yeah.
+
+I saw the number of applicants went crazy as well. Very much like the Mercury.
+
+If you come on out. Yeah. Maybe it's better to call them yourself.
+
+Yeah. Very true. Yeah, I think he's been. He's been applying for the agency for quite a while now.
+
+Yeah. You know, he's helping us going. And so I guess he's close.
+
+Yeah. Yeah, he's got the he's got the he's a few times but he's like yeah.
+
+So the feedback on his last DLC was really was really quite annoying because essentially the feedback boiled down to like,
+
+oh, you haven't started the project yet, so you haven't got any like preliminary data.
+
+He's like, he was like, yeah, like I'm waiting for the money for the project. Yeah, well, he has really moved now, Max.
+
+Yeah, yeah. I think, um, the project, he was, uh, like he's writing.
+
+Oh, okay. Okay. Yeah. Yeah, yeah, yeah.
+
+So I think at the moment, Max, he doesn't have a like, you can't put interfaces that are, um.
+
+So I think part of the project is, at least from my understanding, is developing partly max TV,
+
+but also using these like new DFT plus plus V calculations to look at band alignment when you put in the serve.
+
+I think it's very difficult. But yeah, I guess maybe £1 million can solve that, but I'm trying.
+
+I think going forward, I think I think so, yeah.
+
+So I think, I think it will just take like, you know, a competent postdoc to, to putting in to be able to put interfaces into max DB.
+
+And then obviously you need to deal with the like how to actually deal with like band dandelion in a good way.
+
+Um, due to the interface. So. Yeah. So that's why he wants to use these, like, UCP, um, calculations.
+
+But I've done a few of those and they are very expensive.
+
+So when you have an interface there, it's going to be. Oh really? Yeah. It's going to be very hard I think.
+
+Oh I thought it was like the should be similar to the episodes for I think it is similar.
+
+But um, I mean, at least in my experience, when you have, um, when you have a interface with a metal,
+
+that's when things like the u+ v formalism that we want to use or that he wants to use, um, feels very poorly with matters, I think.
+
+Um, and that is something that. Yeah, we, we experienced.
+
+Oh, wow. Wow. Okay.
+
+Well, how to improve functionals. The answer is Yes, absolutely.
+
+Thank you. Uh, yeah, I will try this.
+
+Yeah. You know.
+
+Yeah, I played around with it, but I feel like that's not good. Enough.
+
+You know the. Oh. Is it? No, that's that's matzah.
+
+I think that because I feel like he always says that.
+
+Yeah. Yeah. I mean, I think he's I mean, he's like putting himself up as this, like,
+
+this is the new frontier because he wants to be for, like, special promotions, right? He wants to do everything despite his family and so forth.
+
+Yeah. No, I think the formalism that we were,
+
+that we were using in the he is going to continue using combined comes from this from the advanced Institute in Korea, um, from World Okay.
+
+What is the point? What is the argument?
+
+Yeah, just possibly so. Yeah. But the the way that they implement it is very nice because there's only one like parameter that you can specify.
+
+And that's like the nearest neighbour distance. Um, and then every like the U and the V are,
+
+are determined self-consistent in the same formalism which is is very nice as like near accuracy for certain.
+
+Like it's just an arrow. Yeah.
+
+Yeah. Exactly. So like you can always find it. Yeah. Yeah.
+
+Um, so they did scan through quite a few materials for this, but yeah,
+
+when we emailed them and we were like, hey, we want to use it for metals, they were like, do it.
+
+Don't try it. Don't try it. I feel like that's annoying, right?
+
+If there's a caveat, can you give me the materials? Yeah. So the thing is also that for all of them, you have environmental benefits.
+
+How do you benchmark to best align? need to do it. I want to get out.
+
+You just don't get it. You do it with a plus B.
+
+You do it with your most accurate calculations. Yeah.
+
+I mean, he he did propose to maybe try one GW calculation on it, but that that is going to be a horror.
+
+I mean I've, I've done GW calculations with like a surface and a molecule on a top,
+
+but then if you add an interface in that as well, that's going to be horrendous. Yeah.
+
+If you do any double cooperation. Why should you be happy in the same way?
+
+Thinking about like we made, we made it so difficult.
+
+But then there are still so much more about DMC that we don't even mention exactly.
+
+What do you feel is your job?
+
+Maybe I'm wrong. Oh. You know. Oh, yeah.
+
+Oh. Come on.
+
+You know what you know.
+
+Well, actually, no, I have no idea. He went to Berkeley with no plan, but, um, he was like.
+
+Yeah, like, I want to, like. He had a few things on his checklist.
+
+Like actually being able to run Mac TV because he had never run a calculation on it.
+
+Uh, he then wanted to, like, understand some of the stuff that the people should know.
+
+Looks like that. Um, and then apart from that, he was like, yeah, I'm just gonna see who's there, what they do.
+
+He ran a GW calculation The other day he messaged me and was like, wow, this field is great and you haven't done that for a while.
+
+Exactly. Yeah, yeah. I was very sad because like, you know, that's the fun part.
+
+This is the part I could be doing ten years in prison.
+
+You are good at these times. I love you.
+
+Yeah, yeah, yeah. So, like, there are some supervisors that have like, 15, 20 PhD students, and I'm like, what?
+
+Like what? Like the the postdocs kind of become the supervisor. Yeah.
+
+Exactly. Yeah. Yeah. So I agree with you.
+
+Like, I think I would if I had my own group, I would run it as like I would have like three students at one time.
+
+I would work on something But then you won't have a lot of papers.
+
+Yeah, exactly. That's the only thing. It's like a trade off.
+
+That's how many people get like h indexes of like 150 or something because they have like 90 students.
+
+Okay. Yeah. 59. It's just a number.
+
+Yeah. Well, you got a faculty position and also a faculty position in the UK, so you can't get kicked out of here for everything.
+
+They don't have anything. Hey. That's good. Oh, hey. I was shocked.
+
+Wow. So at least you don't need to be obsessed with this one number.
+
+Yeah. Also, I guess, um, I guess it's quite nice in terms of, like, you're hired.
+
+You're actually hired. It's not. It's not like in the US where you, you're on like, tenure track, right?
+
+So it's like you need you're still evaluated to see whether they want to keep you.
+
+And that is based on the amount of papers. Oh it's going out and stuff like this.
+
+It's a bit. Yeah. There is a you better wait. Yeah, but the difference is also in us.
+
+It gets us more resources. Mhm. Okay.
+
+So if you really have this ambitious research fund that you want to carry out.
+
+Yeah. Which requires some degrees. Mhm.
+
+Then do anything you want. Right. Okay. I see.
+
+Yeah. So here of course is more secure.
+
+But you can. Yeah. That's true. That is true.
+
+Yeah. Just grab the money. So I actually don't know how the experimental groups work because they have more resources.
+
+And for us, we just need some computing time. Yeah. The wall Street.
+
+Yeah. Well, the culture is it?
+
+Yeah. Yeah. Hey.
+
+But there is. Nothing.
+
+I think you do. Either.
+
+I mean, some of them I remember from last year. Oh, really? Other modules.
+
+Oh oh. Oh, really?
+
+If you think they're confused now, wait until you get to the phone on stuff. That's. That's rough.
+
+Especially for a band structure. So I think that's what that's what gets gets them the most.
+
+Oh yeah.
+
+Because like it's only like three weeks like prior that they like wrap their heads around like electronic band structures and stuff like this.
+
+And then they're like, oh, phonons have a band structure as well. You know what?
+
+Yeah. This course will be twice as long.
+
+Yeah. Yeah I agree. Yeah. You do like. Yeah.
+
+So maybe you ought to reveal some more matrix. Yeah.
+
+Because like matrices are in the first year and then they just like.
+
+No, don't do it anymore. Yeah. Well, they, you know what? My my old university was also like this and that.
+
+Like, they taught you something in second year,
+
+and then it would come back and forth here and you'd be like, you'd be expected to like, know it like that.
+
+Yeah. It's like, bro, I haven't used it. Yeah. I mean, every now and then it is used, but then you forget what it actually means.
+
+Yeah. Yeah. Well, we'll come back for the Christmas party.
+
+Yes. Yeah. Mountain on the mountain.
+
+Yeah. Yeah. Yeah.
+
+Yeah. Yeah. I think, uh. Um, your students come in here as well.
+
+Oh. Very nice. Oh, right. Yeah. And let me ask you this.
+
+Yeah. Oh, I won't be free, unfortunately. Oh! My God.
+
+Oh! My God.
+
+Oh, right. Yeah. Oh, okay.
+
+All right. Okay. Oh, yeah.
+
+Hold on, hold on, hold No.
+
+No no no. No no.
+
+No. I don't. Want.
+
+You to do it. I don't. Know how.
+
+To go. About.
+
+Your business. So you know.
+
+I like that. Oh, yeah. Oh, yeah.
+
+Yeah. That's. Right.
+
+So let's. See what we're going.
+
+To tell you about. I promise you, that will be cuddles.
+
+Come on in. What does that mean?
+
+Oh. Yeah.
+
+Oh. Yeah.
+
+I. I don't.
+
+Know if that's true. You want to be okay?
+
+I don't know. Does. Anyone know?
+
+Oh. My God.
+
+I. Told you.
+
+So. You know.
+
+What I mean? Sometimes. You don't.
+
+Even your good ones. Oh, it's your joy. Thank you.
+
+No, sir. So what?
+
+Well, what? What? What is.
+
+Your home. I.
+
+Don't know. Hello?
+
+I don't know, I. Don't know anything.
+
+About. It.
+
+You got your master's degree. Cool. So. Yeah.
+
+You. Know.
+
+Yeah. So I feel. Like.
+
+I would probably. Say that.
+
+That was awesome. I was.
+
+Like, man, this is not going to.
+
+than $130. Wow. I think I would like to push this one and then put this place where you can learn.
+
+I'm not. Sure.
+
+If it's not. Like.
+
+That. No, that's not good. That's what you want.
+
+But that's just what this is about. Wait.
+
+Wait upon me. I'll do what I'll do. We're going to do it.
+
+Okay. Okay. Okay.
+
+All right. Yep.
+
+Is there any way to get you there? I don't know.
+
+Yeah. Yeah.
+
+So you just want to go back for that? Yeah. So you would do CB space and stuff?
+
+Oh, yeah. So that just brings you back. Okay.
+
+No worries. All right?
+
+Yeah. Thank you so much. Thank.
+
+You. Thank you.
+
+Okay. Okay.
+
+What do you mean? What?
+
+Are. You doing?
+
+They are. Not.
+
+Oh. Yes.
+
+Oh, yeah. Yeah.
+
+Just copying. I don't know if you like.
+
+Next week's lecture is quicker, so. Yeah.
+
+I think so. Yeah. Yeah.
+
+Yes. In one second.
+
+Okay. Well it's functional.
+
+The function of the function that takes another function. So.
+
+If you think you know.
+
+What I. Was talking about, like.
+
+One of them is always that bad. Yeah.
+
+I think it's better you got the exchange function for the.
+
+Variable. It? Yes, but I mean, I don't.
+
+Know. Anyone else?
+
+That's right. You're not. Supposed to.
+
+Do it. Anyway.
+
+Right. Okay. Okay.
+
+Yeah. Okay.
+
+It was That's it. That's it?
+
+Yeah. You have a great. Time.
+
+I'm looking forward to. It.
+
+Yes. Yeah. Oh, yeah. So I guess I'll be the one with the inner electrons screen.
+
+Uh, electrostatic potential of the nucleus of the outer electrons.
+
+Because I'm going to need to do that. Yeah.
+
+So that's really about the. It. Has to be more specifically so for what kind of.
+
+Party. I mean, I suppose if I just.
+
+Knew that it would be. A second time.
+
+Yes I did. Yeah. Yeah. But hasn't there been some work on the machine learning system?
+
+Oh. No way.
+
+It's in different places. No, I'm not quite sure.
+
+I just for some reason, it popped into my head. You know, when we actually get paid.
+
+Uh, what do you mean? It depends on the how when we're going to get paid.
+
+Probably one second. Okay. I think.
+
+Uh. Let me check.
+
+By the evening, the Cut-Off.
+
+So the actual space allowed.
+
+Uh, allow yourself to look this up. I mean, it's it's infinite.
+
+You have to cut it off. You. Know?
+
+Yeah. Yeah, yeah, it's like I think it's okay.
+
+And so. So we can have this place.
+
+Of November. Oh, it's like a month delay.
+
+Oh. I don't know. That's annoying. What are you in a hurry for?
+
+Um, yeah. Well, not.
+
+Yeah, not just for the mountain hut, but, like, I need a game like that, depending on the control.
+
+Yeah, I feel like all the dinners kind of cut up. Yeah, they are adding up.
+
+I mean, I love, I love going on dinners with you guys, but, like, at the same time.
+
+Yeah. Same here. That's fine. Like, I always want to go to it because I keep getting free stuff from now.
+
+Oh, right. We can keep going. Yeah. Well, like, uh.
+
+Yeah, I need to cut it down to, like, going out once for once per week when I need to.
+
+That's fine. Yeah. I will.
+
+Tell you if you need to speak to me. Have you needed a speaker?
+
+Did you need to help anyone? Yeah. Did you?
+
+Know? What would happen?
+
+If I. Kill you.
+
+How do you. Know that?
+
+Your mom did not want. To do a test.
+
+How do you feel that? The rest. Oh.
+
+You know. What the coon does.
+
+Alright, so he's a right hand man.
+
+Um, it depends what, uh, stuff you'll be looking at.
+
+Do you know what system you'll be looking at? Like twisted.
+
+More like. Yeah, like a materials defect.
+
+Oh. Probably siesta. Uh oh, I don't know, because they only use they use siesta because Chris was using it and Chris was very good.
+
+But now Chris has gone. Maybe you'll be using one tap on tap.
+
+Yeah. Um, it's a linear, like, so, you know. So DFT scales cubical with the number of atoms in the system.
+
+Well there's like, um, this funky ways that you can use approximations to make it linear scaling with the number of atoms.
+
+So you can you can do these twisted systems. Well, maybe if you won't be so interested, I guess he will be doing that.
+
+Maybe not. If not with optical.
+
+Optical spectrum. Oh, okay. So, like, just just straight, uh, one like 2D monolayer.
+
+Yeah. Probably deeper. Okay.
+
+I mentioned something about it recently for, like, uh, for, for the, for the study of this, uh, of, um, the single photon animation.
+
+Oh. Oh, okay. Um, in that case, you, uh.
+
+So that's the stuff that works. Uh, so you'll be using quantum espresso for this?
+
+I'm almost certain. Quantum espresso. The exact code that you're using now.
+
+Yes. Yeah. Yeah, yeah. Because if you're just looking at, uh, like a single monolayer with no sort of, like,
+
+twist angles, then, um, you know, you don't have too many atoms in these units.
+
+So you can still do sort of quantum espresso calculations.
+
+Yeah. So there. You already have something. Yeah. So? So this.
+
+This should be good. This should be, um. Yeah.
+
+If it's if it's like defected monolayers, then then usually we've had students in the past do kind of espresso calculations on it.
+
+And I know the problem. Is that.
+
+Yeah. I mean, I'm not going to say that. What is this, this field?
+
+I mean, why was that? And everything is okay.
+
+Okay. In that case, you might want to speak to Colina because Paulina does single photon of essence for her PhD.
+
+So yeah. So I think that.
+
+Yeah, that's part of. The reason.
+
+I actually, I wonder what's the current.
+
+What is the single photon? I have no idea.
+
+Literally no idea. I don't know what. I mean?
+
+Which what kind of field? And also I will redirect this question to you.
+
+Oh. I can't remember. I know, okay.
+
+Well, so I just checked into the first page that we get from this is on the 24th November.
+
+Oh, I need the money. Oh, yeah.
+
+So they didn't pay us enough to do one or maybe some other things.
+
+Maybe it's because you die all too much. I think so. I think this is exactly why.
+
+This isn't working. So this is like going on right now.
+
+As I mentioned before, I think so until February next year for the rest of the year.
+
+Do you have any more money in your group to, uh, like, are you looking to get more PhDs in physics or.
+
+Uh oh, yeah. Yeah. Okay. No.
+
+Another PhD? Yeah. Nice. Otherwise, like, the students will have a quarter of the department.
+
+Is that okay? Okay. So do they initially provide you some money to get your group started, or is it.
+
+Did you have to. Oh, that's, So I learned from very little.
+
+Okay. Oh, wow.
+
+Okay. What's your problem? Yeah. You can't even see.
+
+Yeah. Oh, okay.
+
+Oh. Like the department. Oh, I see, I see. That's all I know.
+
+Okay. I see. Yeah. Are you writing any occupations?
+
+I mean? Yeah. Yeah. Okay. That's.
+
+That's fine. Of course. It's very competitive. Yeah.
+
+I think Johannes said that, uh, he's his mantra is just like, just.
+
+He's just keeping applying for it and said he gets it because he's still.
+
+He saw somewhere that, like, every time you submit, you have like a baseline, like 20% chance of getting it.
+
+So I think this is a really reduced since the number of cases is increased.
+
+Yeah. Uh, I mean, here we can still do some they're dealing with old friends?
+
+Yeah. True, true. I don't mind if I just have one.
+
+Yeah, because. It was so cool.
+
+Oh, yeah. Oh, yeah. Yeah.
+
+Yeah. Uh, but, yeah, you can just, like, three things I can think about.
+
+Oh, yeah. I got the Breeders Cup. Yeah.
+
+That's right. Not that one.
+
+No. Yeah. Yeah. Yeah. I would have to ask her.
+
+I don't know. Cause it's usually for me. I don't really think about it.
+
+Something like that. Yeah. Ahead of that.
+
+So you were like, kind of. Kind of. A little secret.
+
+Last year we, uh, we brainstormed the hour before we had the meeting.
+
+So you're like, yeah, yeah.
+
+Like, I think you typically have, like, a general idea, but you don't get, like,
+
+concrete, like what you want to do until much closer to the date along the way.
+
+Yeah. Yeah, I think so. Yeah.
+
+So yeah. Sorry for disappointing. That's all right.
+
+How about that? Yeah. Okay, good. By the way, is this is this your.
+
+Oh, yeah. No, it's no worries. Just in case you forgot it.
+
+Thanks so much. For those reports.
+
+So we will make one word for you.
+
+What I really. Want to get out of the box.
+
+How did you go for?
+
+It. I'm doing a hike to entrance. How are you doing?
+
+Oh, that's actually good. Oh, is this the one in Wembley?
+
+Yeah, yeah. Okay, so we do.
+
+Know that this is totally crazy.
+
+Oh, my perplexity is okay. Um, because apparently when they, uh, create their own bar script, they have to choose the person.
+
+Yeah, yeah, yeah. That's true. Well, people are creating their own good.
+
+Oh, no no no, no, I think it's good.
+
+It's good. One year we had we had someone accidently deleted the data directory because they were trying to master it somewhere.
+
+That sounds lovely. Yeah, I'm not having this. And it's like we're in the middle of a problem.
+
+Yeah, exactly. Oh, actually. We agreed. Oh, yeah.
+
+One, one and one and three. Yes.
+
+All right. Oh, I would do it.
+
+Oh, no. That would be generous. Yeah, well, that's why you do the first one.
+
+Yeah. And so you tell us what the expectations are.
+
+Yeah. Yeah. Usually I think usually the way we've done it is that obviously like we are usually quite nice,
+
+but if they write something that's wrong, you have to deduct a mark.
+
+That's the way that you have done it. But if you want to, yeah, we can be more lenient.
+
+I remember you had to tell Nikita off because he failed like everyone.
+
+Oh. What? Yeah. One year, Nikita was marking. He was an old student.
+
+And, um, unless that answers were, like, so rigorous and had no mistakes whatsoever, and he would, like, give him 40 something.
+
+Yeah, that's too much. It's so much awesome.
+
+Yeah. Yeah, I think it's quite good that.
+
+We all share. Yeah a consistent.
+
+Yeah, yeah. Oh. Really?
+
+Oh, yeah. Also, I don't know how you are, how you want to do it, but sometimes in the past,
+
+students would submit dances where they don't show any workings whatsoever. They just admit the answer.
+
+So Johannes usually gives them learning.
+
+So like, um, I think in the second problem, she, uh, they're also like calculating reciprocal lattice vectors or something like this.
+
+And some of them just like put the answer like b and then the answer.
+
+Um, so Johannes,
+
+usually he's what he's done is only given them one mark out of however many it's worth for that because you don't know if it's actually done.
+
+So, um, I mean, we don't know if we don't.
+
+Yeah. Or do we have to figure it out?
+
+Oh, I have, I don't know.
+
+Yeah. I kind of think about that.
+
+It wasn't until around my house that I was Right?
+
+I think. Yeah. Yeah. Yeah. Um, I don't think I can.
+
+There is no such function as you can. It's interesting.
+
+I'm working on that. If you do. If you have CW done that, you should have.
+
+Well. I think that probably might have.
+
+Something to do. Yeah. It's it's really annoying. Wasn't any answer.
+
+They were just not there. I see. Besides the crash on the numbers.
+
+So I didn't know it had to be entirely just because it's a notebook.
+
+Right. That's embarrassing.
+
+Okay. You know what I think? You think about that.
+
+And it goes like this.
+
+Yeah. I'll let you log in and navigate to the file and then I'll come back over.
+
+All right. I mean, that's how it is in the real world, I guess.
+
+Wouldn't you like programming system. To.
+
+Be like, oh, yeah, I saw this one.
+
+Yeah. I was having an existential crisis with the financial crisis, and we wanted to create something.
+
+Yeah, yeah, yeah. Yeah, I saw those people that sent that.
+
+That's Cool. So writing cool, cool cool.
+
+But I'm writing. But yeah, it's only a few years.
+
+Since I saw. This in 1971.
+
+Most of the people on the bus company are using, and 50% of them have been seen.
+
+Yeah, I like that. Those are.
+
+So this is your thing. And so if you do, if you can tell us between 5000 yeah, you can navigate.
+
+Oh. Oh yeah. Yeah.
+
+No it's no worries. I mean you get used to this a lot a lot more.
+
+The more that you do these kinds of calculations. That's the way it is.
+
+Just follow me. Yeah. This isn't.
+
+About you. Yeah. This is not.
+
+Going. Anywhere. Whoa!
+
+Wow. Okay. So it would be the undisclosed solution, you know?
+
+So I think you might change my change. Okay.
+
+All right, all right. Yeah. Yeah.
+
+All right. Okay. So this is because you haven't done so if you if you.
+
+Do. Yeah. Yeah. So you haven't yet brought the.
+

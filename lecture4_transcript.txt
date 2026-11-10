@@ -1,0 +1,1237 @@
+[Transcription générée automatiquement. Des modifications ont pu être apportées pour plus de clarté.]
+Humbled. Thank you.
+
+Thank you. Thank you.
+
+All right. I think we can get started. Please take your seat and keep quiet.
+
+Thanks a lot. So welcome to lecture four of our DRP course.
+
+Um, just a reminder that, uh, the problem step two will be due in one week, so next Tuesday.
+
+And after today's lecture, you should be able to do this.
+
+Um, and, uh, this is our model ring, multi-layer boron nitride. And it will be looking at the band structure of that.
+
+Um, so before I actually start, um, after last lecture, um, I found out that there is a confusion on the notation that I want to briefly talk about.
+
+So. it's about this multiplier.
+
+So remember last week we did something like this.
+
+So we Fourier we did the Fourier transformation of the wave function.
+
+We say this is a sum of g where g is all the possible k vectors.
+
+Um and then we expanded to this r to the plane waves.
+
+And then we did the same thing for the quantum potential.
+
+And we said okay this we can also do the same for expansion with g e g r.
+
+So so here the CG and weight are just the coefficients of the Fourier expansions.
+
+Right. And then I think the confusion for some of you was that the when we tried to multiply the two.
+
+So we said we do the we KSR multiplied by PCR.
+
+And here we wrote it as this sum of g g prime c g we g prime e I g plus g prime.
+
+Right. So. So I think for some of you, because I got this question after the lecture is a bit confusing where the G prime is coming from.
+
+Right. And this is not the only place that we see something like this.
+
+So for example, remember when we did the Hartree energy.
+
+So that was kind of multiplying the two electron density together.
+
+So this is written out as this.
+
+So again the double integration. And then an r and r prime and r minus r prime.
+
+Right. So so I think for some of you It's a bit confusing where the the R prime is coming from, right?
+
+Sorry. Here should be. B r.
+
+B. Okay. So. So the reason why I here we need the prime notation is just to distinguish that the g and g prime are not the same index.
+
+So let me give you a very simple example. Let's say we only have three g vectors.
+
+So let's say this is our set of g and this is only g1 g2 g3 right.
+
+And then we say okay now we have two vectors a we will write as a g1 g1 plus a g2 g2 plus a g3 g3.
+
+Right. So. So let's just say that our vector A is a sum of all the three g vectors multiplied by a coefficient.
+
+Right. And then here we can write this as sum of g a g g.
+
+Right. That's that's easy. Hopefully. And then I say no we have a vector B which is like this.
+
+So exactly the same except for it has some different.
+
+Sorry. It should be B. So it has some different coefficient.
+
+Uh, so here is uh summation of B right g3.
+
+And then we can write it as g bg.
+
+Right. Then how can we write a dot b for example.
+
+So. So if you naively write that everything out, let's say we we, we put these terms together and say, this is some of g, some of g a g b g g g.
+
+What's the problem? Um, it's a it's a problem.
+
+Right? If you write it like this, it goes here. You will be assuming that you are only multiplying the terms with the same g.
+
+Right. So, so that would be. That would be assuming you're only multiplying g1 with g1, g2 is g2 and g3 was g3.
+
+So that's the reason why we need different notation. And it actually doesn't matter how you actually write it.
+
+So. So of course in the lecture we just say okay now we put all these term g prime.
+
+So then you also get the cross multiplication terms right.
+
+Um but then the actual the actual letter that who used for this notation doesn't matter.
+
+For example, if here I put g double prime.
+
+So if I change all the g prime to g double prime, it doesn't change, right?
+
+So same thing here. For example, if I put here or R double prime it doesn't change.
+
+Right. Because that is just a way to show that it's a different notation.
+
+But but in terms of integration or in terms of summation, it's still going over this set that we're still considering.
+
+Right. So that's why in the derivation that we had last week, we can freely change this notation as long as is is summing over the same set.
+
+Okay. Hope that's clear. Okay. So that's just a small note.
+
+And uh, let me clear it out because that's not related to what we are going to talk about today.
+
+Okay. So now let's give a recap of what we did last week.
+
+So we discussed some practical aspects of DFT and starting with the exchange correlation functional.
+
+Right. So remember in quantum DFT there is this term.
+
+So we said that we have written all the terms that we can write.
+
+So the kinetic energy the heart rate energy right.
+
+And then we say that what is what whatever is left.
+
+This is the exchange correlation which we don't know the exact form.
+
+So last week we looked at some different approximations people use in order to um, write this exchange correlation part out.
+
+And the most simplest one is the LDA. So the local density approximation.
+
+And then in that we just assume that this exchange correlation term is uh Just can be replaced by this integration,
+
+where you consider the electron exchange correlation energy in free space,
+
+and then you plug in your actual electron density in R and do the integration in order to get this total exchange correlation energy right.
+
+So that is a local density approximation. But then we also talked about for certain systems, for example,
+
+if you really want to get the bandgap correct um then you need to go to higher order approximations for example hybrid functionals.
+
+Right. Um, and then we discuss some practical aspects of how to solve the equation.
+
+And there is a very important concept called the self consistency.
+
+Because if you write how the quantum equation you will see that, uh, we are solving for the quantum orbitals.
+
+But uh, in order to write the equation out you need this na, which depends on the quantum orbitals.
+
+Right. So the way it's done is that you give a initial guess of this electron density and r, solve the control equation, get the orbitals,
+
+and then see if the electron density you get from that is is consistent with the input of the answer in the quantum equation.
+
+Right. And then after several iterations in the end you will achieve self consistency or convergence.
+
+Right. And then we talked about so. So a lot of DFT codes are plane wave based.
+
+So including Quantum Express which is the one that we are using in this course.
+
+And the idea of the plane wave method is that we are expanding the wave function into the plane waves.
+
+Right. And then we had a look at how to do that in the actual code.
+
+And the last concept we talked about the pseudo potential. So that's like combining the nuclear core with the core electrons.
+
+So the inner shell of electrons. And in this way you get the effective potential of this combination.
+
+And this allows us, first of all, to treat less number of electrons.
+
+And then it allows us to use a lower energy Cut-Off in order to achieve convergence.
+
+Right. Okay. So now I want to go a bit more into the detail of how I did this example of N2 molecule last week.
+
+So last week we said for this plane wave based code,
+
+even though we are treating an isolated molecule like N2, we're still putting it under a periodic boundary.
+
+So for example let's say this is a cubic box with lattice A right.
+
+So this is a periodic boundary condition.
+
+And then we said, for this N2 case,
+
+it is a good assumption that the wave function has the same periodicity as the lattice satisfy the same periodicity.
+
+So that means if you write it out is. So if you write it out in the x direction,
+
+that means if you translate translate the policy by x so by the lattice vector then you get the same thing right.
+
+And then that's how we can do the Fourier transformation we talked about.
+
+So just briefly. So this allowed us to write it out like this.
+
+And then we plug into the quantum equation.
+
+So this part I will not do again. But, uh, you can look at the notes from last week to see how it's done.
+
+But in the end, we were able to show that once you do that, you convert, um,
+
+solving the quantum equation into a matrix eigenvalue problem, which can be readily solved by computers.
+
+Right. And this matrix eigenvalue problem is like this.
+
+Okay. Um, and then and last and the important point is that, uh, of course this is a matrix eigenvalue problem.
+
+But um, if you just if you just write it out like this, um, it's still unsolvable Because the matrix has infinite dimensions.
+
+Infinite. Dimensions.
+
+So that is why, towards the end of last lecture, we said that um.
+
+In Plane wave the DFT codes, we introduce an energy Cut-Off.
+
+So only include G up to a certain energy.
+
+And this is written as this. You can't.
+
+Right. So so so we're constraining the energy of the plane wave that we're using.
+
+Um, to this Eckart and Eckart is also a convergent parameter, um, that you tested last week in the lab, right?
+
+Okay, so we briefly mentioned the last lecture that, uh,
+
+what we are going to do today is to show that, uh, this is actually not satisfied for for solid.
+
+For crystals, for example. So, so we're going to see in this lecture that uh, for crystal solids, um, it is actually not,
+
+not correct to assume that the wave function will have the same periodicity as your lattice cell.
+
+And that leads to the Bloch theorem.
+
+So, so how actually the wave functions in periodic solids would look like uh, and then we will talk about how to do all these um,
+
+for the periodic solids instead of uh, this is a more like a simplified case where we only consider isolated molecules.
+
+Okay. So this is a summary of the items that we are going to be discussing today.
+
+So we will be first introducing the reciprocal space and the brain and so on.
+
+So so this is like a prerequisite for discussing the periodicity the periodicity of solids.
+
+And then we're going to the block theorem that describes um how the wave functions should look like in these crystals.
+
+And then we talk about how to solve the equation for electrons in crystals.
+
+Okay. So so before we start, how many of you have already learned the reciprocal space and the brilliant.
+
+So raise your hand. I hope everyone.
+
+Okay. Most of you. Right. And how about block theorem.
+
+How many of you have learned heard of that?
+
+Know what it is. Okay.
+
+Not everyone, but a number of people. That's good. That's good.
+
+But. But, um, if you have learned this, uh, this should be more like a review.
+
+Um, so the new part will be how the last part where we see that how computer code actually solves this.
+
+Okay. Okay. Now let's get started.
+
+So, Christos. So. So, Christos, let me give the definition.
+
+Crystal crystals are periodic, periodically repeated.
+
+Unit cell. Um, and it can contain one or more atoms.
+
+So that's the definition of the first, right.
+
+And then if you give an example. Um, let's say.
+
+Just, uh, draw some lattice. So this is my unit cell.
+
+Right. And then the unit cell can be represented by its lattice vectors.
+
+So for example if I right here this part is A1.
+
+This part is A2. Sorry like this.
+
+This part is A3 right. Um so unit cell is characterised.
+
+By three primitive cell lattice vectors.
+
+So here the a1 and a2 and a3 that We have written.
+
+And then, of course, our crystal here is the infinite, right?
+
+It's on the periodic boundary condition, meaning that if you think about it, is actually having this translation on all three directions.
+
+So let me draw a few more of these boxes to show that this is a periodically repeating, uh, crystal lattice.
+
+Right. Um, and then if you think about all these lattice points of a crystal,
+
+you can actually write it out after we have this notation of the primitive cell lattice vectors.
+
+So, so let's say all the points, all the lattice points in this crystal um is r.
+
+Then r can be written just as n1 a1 plus n2 a2 plus n3 a3 Where?
+
+On one and two and three are integers, right.
+
+So that should be quite straightforward. So just imagine I have these boxes expanding all three dimensions.
+
+Then R gives me all the lattice points of this crystal.
+
+Right. And then if we define r like this um we can also define the periodicity of our first two.
+
+So to satisfy. Periodicity.
+
+For example our BCS the quantum potential right.
+
+So the constant potential should always have the same periodicity with the lattice.
+
+And that means we can write it as this. If you translate it by any lattice vector r the capital r, then you should get the same potential.
+
+Right. Because the potential is uh, you you can't you can think about it as the potential of the nucleus, right?
+
+Uh, and this always has the same, uh, periodicity as a crystal.
+
+Okay. Now, this will be quite familiar, I hope.
+
+Um, now comes to the reciprocal lattice, right?
+
+Because, remember, in our plane wave code, we most of the time where, uh, where we are using plane wave notation.
+
+Um, plane wave looks like this. Um, e to the ikr, right.
+
+And to build the reciprocal lattice, we ask one question.
+
+So the question is which. Oh sorry.
+
+Which k values. Would make.
+
+E to the ICA. Satisfy the body's periodicity.
+
+Right. Because if you look at the plane wave. E to the Ikr.
+
+And if there is no constraint on k, then the plane wave doesn't necessarily satisfy the lattice periodicity.
+
+Right. So now we want to find the set of plane wave that satisfies the lattice periodicity.
+
+And the k values that allow this are what we call the reciprocal lattice vectors.
+
+And then to find that out that's quite easy right.
+
+Because if a constraint it would Ikr to satisfy the lattice periodicity we are basically saying that e to the IG delta.
+
+So say this this set I will call G.
+
+Right. And then the the the condition g should satisfy is that e to the ig r should be equal to e to the I g r plus capital R.
+
+Right. So that's just writing out the periodicity constraint. So it's the same thing here.
+
+If you translate it by the capital R it should give you the same results.
+
+Right. And then that will give you just a e I capital G dot capital R should be one.
+
+Right. And then of course that means g r should give you two pi multiplied by integer.
+
+Right. So so in that way we we can write out the condition for g quite easily.
+
+And if you also expand the g to this primitive reciprocal lattice vector.
+
+So. So imagine we can write key as m1 b1 plus m2 b2 plus m3 b3.
+
+Then we will know. So. So. So under this constraint what we will find is that, uh, a dot PJ should give you two pi delta ij.
+
+So that's, that's how you find the reciprocal lattice vectors B um, and you can if you want to prove this you can plug it back in.
+
+So. So say this is our G right. And then our g r would just be sum of I13BI.
+
+One three and j a j.
+
+Right. And then this gives you some of ies.
+
+Some of. J. Um I n j e I dot a j.
+
+And then this by j is. Oh, yeah.
+
+Sorry. Yeah. Yeah.
+
+So, so this is equal to delta I j anyways. Right.
+
+And then in the end this gives you of course this is equal to two pi multiplied by an integer.
+
+Right. And that will allow you to allow this uh e to the IR satisfy the lattice periodicity.
+
+So that's how um, the reciprocal lattice is uh um is defined.
+
+So she vectors form a lattice called reciprocal lattice.
+
+And here by we call them a primitive.
+
+Reciprocal. Lattice vector.
+
+Okay. Okay. Any question up to this point.
+
+Oh, good. Okay. If you have learned reciprocal lattice this should be quite straightforward.
+
+Just a review of what you have learned. Um and then if you actually if you want to actually calculate the, the, the b, um, there is a equation.
+
+So we have.
+
+E y is equal to two pi a2 cross a3 divided by v, where v is the volume of the lattice a1 dot a2 cross a3 okay, and then same for b2 and b3.
+
+But let me still write them out. So this is a3 cross a1 and b3 is a1 cross a2.
+
+So that's how we can actually calculate the b vectors from a right.
+
+Um and then there is a very important definition which is uh first uh very soon.
+
+Okay. So first the brown zone is defined.
+
+The definition is a region of reciprocal.
+
+Space. That is closer to g zero.
+
+So that's it. That's that's the point over region for the reciprocal space.
+
+Then to any other g vectors.
+
+So that's the official definition. But of course that's a bit abstract.
+
+But we will have a concrete example next.
+
+Okay. So the example that we are going to talk about is uh a 2D rectangular Rectangular lattice.
+
+So, so that's just to give you some idea how they actually look like.
+
+But imagine this is a 2D lattice where my two lattice vectors are a1 and a2.
+
+Like this. Right. Of course it's uh periodically repeating.
+
+So. So let's say it looks like this.
+
+Right. And then here. That's it. This is, uh, x direction.
+
+This is the y direction. Then you can write a1, a2 as uh, for example A1 is just a x and a2 is just a b, right.
+
+So that's just defining the direction of A1, A2 and then AB are their length, right?
+
+And then what? By default AJ is equal to two pi.
+
+Delta AJ tells you is that b1 multiplied by a1 should give you two pi, right?
+
+And then b2 a1 should give you zero.
+
+And similarly b1 a2 should give you zero, and then b2 a2 should give you two pi.
+
+Right. And then in this very simple situation, um, you can,
+
+you can just write B1 and B2 out even without doing this cross multiplication that we introduced in the more general case.
+
+Right. Because this tells you okay, B1 should be orthogonal, B1 should be orthogonal to a2 right.
+
+And a2 is in the y direction. So even of course should be in the x direction.
+
+So b1 should be something multiplied by x right.
+
+And then you should also satisfy that b1. Multiply by a1 should give you two pi right.
+
+So the length of b1 is of course should be two pi over a.
+
+So that's how you get B1. And then similarly you get b2 which is two pi over b y right.
+
+And then of course here we are saying in this plot specifically, uh, A is larger than B, right.
+
+So A1 is longer than A2. But then if you draw the reciprocal lattice reciprocal lattice.
+
+It should be reversed. Right. Because now b1 is two pi over a sow?
+
+Beaver should be the shorter one. So we should do something like this.
+
+So say, here is my v1. Here's my V2.
+
+Right. And then let me also expand that because this is also an infinite lattice in the reciprocal space.
+
+Right. So now let's look at where our first Brillouin zone is.
+
+So let's say at this point is our g equal to zero right.
+
+And then the definition of the first problem on zoom is that the region that is closer to G02 than to any other g vectors.
+
+Right. And then to join this 2D lattice, what you we really do is take the middle point between this and its neighbouring G lattice.
+
+Right. So this region here, if you connect them like this,
+
+this will be the region where all the points inside this region is closer to G, equal to zero than to any other lattice.
+
+Right. So and so that determines our first principle.
+
+Okay. Yeah. Um, so I think we can take a break now.
+
+Um, even though not yet time. But, uh, after we come back, we will be looking at, uh, um, how what that means in order to derive the block theorem.
+
+And then we will see how we can solve the actual wave functions for a periodic lattice.
+
+Okay. Okay. Let's have a ten minutes break and we will come back at 42.
+
+Thanks. Yeah. See you.
+
+What's the problem here? Yeah, yeah.
+
+The father of our Lord. Jesus Christ.
+
+Amen. Amen. Amen. Amen.
+
+Amen. Amen. Amen.
+
+Amen. Yeah. Yeah.
+
+Yeah, yeah. We will be back.
+
+I will have you. Yes.
+
+Yes. Yes.
+
+Okay. Yes. Okay.
+
+Thank you. Everybody. Um, no.
+
+First, I didn't know where you were right before.
+
+I had you. Jesus.
+
+Oh, yeah. Thank.
+
+God. For.
+
+That. We thank you for that.
+
+128. Oh, I see that.
+
+Oh. I see you.
+
+Please. God.
+
+Amen. Amen.
+
+Amen. Amen.
+
+Yeah. This is wonderful. I don't know that I.
+
+Can do. That.
+
+But I would Just like. In the work I do, I tend to support.
+
+Nice. Well. But anyway.
+
+I don't know that I feel.
+
+Like I'm the dog. And. I don't like.
+
+The optimisation. So I didn't check because when I went, when I went home, I love it.
+
+I love it. Thank. You so much.
+
+For joining us. Thank you for coming in.
+
+Amen. Amen. Amen.
+
+Amen. Amen. Amen. Amen.
+
+Amen. Amen.
+
+Amen. Oh.
+
+Yeah. Yeah. I was like, oh.
+
+I. Don't know.
+
+I. Wasn't doing something.
+
+About that. He was happy for you.
+
+I need you to go home. I feel.
+
+Like I've been. I just.
+
+Because. I wanted.
+
+To do that and. I was.
+
+Like. Well, it's. Really important that we don't.
+
+Oh, man. Oh. That's good. Oh!
+
+My God. Oh, yeah. I. Don't know what I'm doing.
+
+I don't know. I have no idea. Mm.
+
+Oh. My.
+
+God! Oh, no.
+
+Oh, I don't know. Oh. I don't.
+
+Know. I don't know.
+
+Thank you. Buddha. Okay, I think we can restart.
+
+Um, please take your seat and, uh, keep quiet. Thanks.
+
+Okay, so. So after we have learned the ladies, um, maybe you will be wondering why we need to do this, right?
+
+But, uh, but, uh, in the second half of this lecture, you will see that, uh, using this,
+
+uh, reciprocal lattice vector notation makes the discussion a lot simplified.
+
+So so a lot easier. And that's something we'll be talking about.
+
+So no blocks theorem. So block theorem.
+
+So block theorem discussed how the wave function in a periodic crystal should look like.
+
+And I will just write it out first. So it states that the solution to the quantum equation in a crystal.
+
+Have the form. This I n k r is equal to e I k dot r.
+
+So that's nothing about our playing wave, right? Multiplied by a u n k r and u n k r.
+
+Has unit cell. Periodicity.
+
+All right. So. So it's actually quite simple.
+
+So it says that I should have this form which is a periodic function U which has the same periodicity with a unit cell multiplied by a plane wave.
+
+So that's all the Bloch theorem says. Um, and of course by saying that ung kr has the same the unit cell periodicity.
+
+If you write that out, it's like you and K should be equal to you and k r plus r right.
+
+So so that's the same as we did in the first half of the lecture. If you translate it by this capital R you should get the same thing back.
+
+Right. And then you may notice that we have no two subscriptions for this Persi.
+
+The first n this we will call band index and the k we will call wave vector.
+
+So you have learned this. Of course you'll know what it is.
+
+But if you have not, just remember then now we will have two index in order to annotate psi.
+
+But we will take a look later. What do they mean?
+
+So why do we have this two indexes. Okay.
+
+So note. So does I satisfy the universal periodicity.
+
+I repeat the question. Does the precise satisfy the universal periodicity?
+
+If you think it does. Raise your hand. Really?
+
+If you think it doesn't, raise your hand. What do other people think?
+
+So even even though the observable you're going to get is the same like probability density, you need that unitary transformation the the e to the I.
+
+Whatever you have upside down satisfy the units. Right.
+
+Okay. Now you should have an opinion. Okay. Okay.
+
+So. So our PSI and KR.
+
+Equal to e I k dot r u n k r.
+
+This one usually doesn't satisfy units of your list.
+
+Because if you look at this, the upper part satisfies the cell periodicity, right?
+
+But the e k r part, since we are not putting any constraint on k,
+
+then translating by this capital R doesn't guarantee you that the first term will become one, right?
+
+So that means that by translating that you get an extra phase factor.
+
+But. Oh wait I don't.
+
+Yeah but um.
+
+Ah, so that's the observable. This is the proportion, of course, to this uh n k r squared.
+
+Um this satisfies the satisfies. Right.
+
+Because if you write this out this is uh e I k dot r u n k r squared.
+
+And if you just separate the two out first one squared second one squared.
+
+Um of course the you still satisfy the periodicity right.
+
+Because u is a periodic function. Um, and then this one is always one.
+
+Right. Because if is squared then you get one little constant.
+
+Um, so so na will still satisfy the Latins from the city.
+
+Um, so if you think this is a bit abstract, you can find this kind of figures online,
+
+which tries to tell you how, uh, actual blocks they would look like.
+
+Right. And the idea is that, uh, think about here, the U is kind of the double peaks that is surrounding each atom.
+
+Right. So every grey points there is an atom. Um, and then you see that this U unit is repeating.
+
+So at every grade point, so at every atom you are seeing this double peak feature.
+
+But then you have this extra like a phase factor ii k r.
+
+So this kind of determines for example here. This is a more long so so long range this kind of oscillation um for this block state.
+
+So this is uh so in the end, you got this kind of, uh, um, blog state in one dimension.
+
+So. So this is, uh, what block theorem tells you how the wave functions in a crystal should look like.
+
+Okay. Okay. Now.
+
+How did you block out that? Let me let me try to move this down, huh?
+
+Yeah. Okay. So proof.
+
+Um, so the proof is actually quite easy. So it only uses the lattice periodicity and nothing more.
+
+And in order to do that, we define the translational operator.
+
+TR r is still this uh lattice vector that we saw.
+
+And the definition of tr is that if you apply tr to any function f r, you should get f r plus capital R, right?
+
+So that's the translation of the function f and the.
+
+Of course, since we are dealing with the periodic periodic crystal then the Hamiltonian.
+
+Is also periodic. And that means if you apply tr to h psi.
+
+This should give you of course you can think about applying tr to h as a whole.
+
+Then this should give you h r plus r plus I r plus r right.
+
+And since the Hamiltonian is periodic.
+
+So for the first term we know that this should be equal to HR for the r r, and then this could be written as h t r per se right.
+
+Because this is written this r plus capital R come back into the translation operate.
+
+Right. So that means for any z we have t r h equal to h t r.
+
+So if you are familiar with the quantum physics notations this is saying the two operators they they commute.
+
+Then in addition. Applying two translations find two.
+
+Successive translations. Does not depend on the order.
+
+So that is to say, if we now do tr tr prime plus, I um, it doesn't matter which order you do it right.
+
+So this should be also equal to tr prime tr cy.
+
+And both should be equal to plus I r plus capital r plus capital R prime.
+
+Right. And if you write it in the operator notation that means tr tr prime is equal to tr prime tr and there should be also equal to tr plus R prime.
+
+Right. And um so, so by this um so by.
+
+By having this uh tr h equal to tr, we can draw the conclusion that the eigenstate of H.
+
+Must be eigenstates. Of tr so.
+
+So remember if we say h psi is equal to epsilon of psi then this should also be eigenstate of the translation operator.
+
+So tr should be equal to kr. So kr is just a coefficient right.
+
+So the eigenvalue of this TR operator. Now here comes the last part.
+
+So since we have tr.
+
+TR prime is equal to tr prime.
+
+TR is equal to t r plus r prime.
+
+If you plug in what we have here you will have.
+
+T r t r prime plus I is equal to kr kr prime psi.
+
+And this will be also equal to kr plus r prime plus I right.
+
+So so now you will have some idea of how the KR terms should look like right.
+
+So So imagine C is like a function of R right.
+
+And now we are basically seeing. C r c r prime should be equal to c r plus r prime.
+
+So which function will form. Which function form.
+
+Does it remind you. Like what function should C be in order to satisfy this relationship.
+
+Any idea? Yeah yeah yeah yeah yeah yeah.
+
+Of course, of course. So. So exponential is like.
+
+X1 x2 should be equal to EX1 plus x2.
+
+Right. So that's that's satisfies what we have written here for CR.
+
+Um but of course they cannot be real Because if it's real, then you're.
+
+Then you're saying that once you do the translation, your, uh, your wave function either decays or rose.
+
+Right. So. So if you do that, actually it's not, uh, satisfying.
+
+What's the constraint of the normalisation of the wave function? You can test that.
+
+So in the end, what we can do is that we can say see AI.
+
+So now AI is the um the primitive lattice vector can be written as EI2 pi x I.
+
+And then if you plug this in you will get KR will be equal to c a1 and one c a2 and two The A3 and three and the.
+
+This is just equal to e to the I two pi sum of I, x I and I.
+
+Um. And if you write our k is equal to x1 b1 plus x2 b2 plus x3 b3, you will get cr is equal to e to the I k daughter.
+
+So that means our tr cy is equal to.
+
+Plus I r plus ab to r. And this is equal to c r plus I.
+
+E I k dot r r.
+
+Right. And if so.
+
+So this is actually already the block theorem. But of course there's one more step that will give you exactly what we wrote here.
+
+Like this. So to define the u and k what we have.
+
+So if we define. You are.
+
+Let me get. Equal to e minus I k dot r.
+
+Plus I are the. Of course this is not the block theorem right.
+
+Because our r is I killed r u r.
+
+And then we can show. You are.
+
+satisfies. The periodicity.
+
+Because he or you are is equal to e to the minus ik dot r plus capital r plus I r plus capital r.
+
+And if you plug it in then you see this.
+
+This is exactly. You are so so so translating u r by this capital r vector does not change it.
+
+So that's a that's the definition of the. That's the proof of the block theorem.
+
+Um, of course if we write everything out like this it seems a bit complicated.
+
+But as you can see the derivation is all about the the translational invariance.
+
+So that's the only assumption that the theorem proof is making.
+
+So then you can see that this is very general for any periodic crystal that should satisfy this form.
+
+This functional form. Okay. So that's the end of log theorem.
+
+Then of course here comes. How to solve it.
+
+How to solve for some equation in periodic solid.
+
+Crystal. So that is the last thing that we want to show here.
+
+So I know last week you were a bit confused about the derivation. This way we are going to do it again but for the blog stage.
+
+So not like what we did for the entire molecule.
+
+So that one was when we assume, um, the, the wave function just have the lattice disintegrate, even though we don't have lattice.
+
+We have isolated the molecule. So, so so today we are actually going to do exactly the same thing.
+
+Except for that. Now our sire has a different form right.
+
+So our PSI are now Bloch states. Well what we're going to do is the same in terms of we are again going to expand our PSI into the Fourier expansion.
+
+Uh, and our v so the quantum potential.
+
+So also into a for expansion.
+
+And then we will plug them into the equation to derive this matrix eigenvalue problem that our computer code should solve.
+
+Um, so that will be a slightly more complicated in terms of now we also have this plane wave term uh e to the ikr.
+
+But The procedure is exactly the same.
+
+Okay, so hopefully that's clearer after we have done it twice.
+
+All right. So. Um, that is just, uh, that's just right as this one.
+
+Right. So, uh, of course, three terms does me write it as term one, the kinetic energy, term two, the potential energy for the function potential.
+
+And then this is term three right. Now for your expansion.
+
+So our VCs still have the latest periodicity, right?
+
+Meaning that we can right VCs exactly the same as what we did last week.
+
+Except now we know that G is a reciprocal lattice vectors.
+
+Right. So this is e g r.
+
+Our plus I n k. Um we said that this is now the block stage.
+
+So if the IK node. Are you are.
+
+You and K are. Um and then the und KR has the same periodicity.
+
+Right. So then that term we can Still extant, and then this will be equal to e to the I k dot r sum of g u n k g.
+
+E g dot. Right.
+
+Um, so you and ag are the coefficient of the Fourier expansion.
+
+Nothing more than that, right? So this should be straightforward.
+
+No we will do for expansion for both.
+
+And then plug them into the three terms that we have here. Right.
+
+So this is very similar term one. Is oh sorry sorry sorry.
+
+We'll go to right the Laplacian. Is um the kinetic energy term.
+
+Right? Now.
+
+This is just a plug in the for expansion into this Laplacian.
+
+And then for the Laplacian. Of course you are doing a double derivative right.
+
+And that will give you some of g. K plus g squared.
+
+So that is coming from taking the derivative of this. Once you multiply that means you write it.
+
+But once more you multiply them together. This becomes sum of g u n k g e I k plus g r.
+
+Right. And then when you take the Laplacian you are doing derivative on derivative of r on this e I k plus g r term.
+
+So that gives you this k plus g squared. Um, but then the other terms are all the same.
+
+E k cross r right.
+
+So that's the term one. Term two is a slightly more complicated one.
+
+And what we saw last week um, because now again we are multiplying x with n k r right.
+
+So this will give you so that's a double summation sum of g sum of g prime g.
+
+Um k g prime e I.
+
+K plus g plus All right.
+
+So that's just multiplying these two terms together. Nothing more than that.
+
+Um, but then we use the same trick to change the notation, which is uh, to define a g equal to g double prime minus g minus g prime.
+
+Yes. And if you rewrite this, this expression using this change of notation, what you get is some of G.
+
+Some of G double prime. Oh sorry. Some of g prime.
+
+Some of G double prime minus g prime.
+
+We g double prime minus g prime u m k g prime e I k plus g double prime dot r, then we use the same trick, right?
+
+So rewrite. G double prime to g.
+
+That will give you. Some of the prime some of g.
+
+We g g prime you in k g prime e I k plus g dot fa.
+
+Okay. Now term three is also easy.
+
+That's just epsilon and k sum of g u n k g e I k plus g.
+
+Right. So so so that's easy. That's just a copy of what we had for K right.
+
+So so what we did is that we plugged in the Fourier expansion of PSI and BCS into the three terms.
+
+And then we arrive at eventually what it will look like.
+
+Right. And then of course you'll see that all three terms have this e k plus g.
+
+And then they can disappear. Right. So if you see all three terms have that so they can all disappear.
+
+Right. And then you will see that okay.
+
+For each g this equation should hold right. Now we arrive at the equation which is like this.
+
+So this is very similar to what we did last week.
+
+If you if you compare the equations that we arrived at.
+
+But the main difference is that now in this eigenvalue problem you have this uh k right.
+
+So for different k you will see that this is this is actually a different matrix.
+
+And that will give you different eigenvalues and different. Different eigenvalues and different eigenvectors.
+
+Right. So let me write that down. So this is the matrix.
+
+Eigenvalue problem.
+
+For each. Okay factor.
+
+Right. So that is why again if you go back to the block theorem we have these two index right and k.
+
+So now you'll see why we need also k as an index right.
+
+Because for different k vectors you get different eigenvectors.
+
+So so so then once you solve this eigenvalue problem you will say okay for this k the psi I get have this index k.
+
+But then of course for a fixed k you solve this eigenvalue problem you get multiple Eigenstates.
+
+Right. So that's the band index. And that's why I have these two.
+
+Let me run this again. So this is the band index.
+
+This is a wave vector. But now you'll see how numerically we are right about these two indices okay.
+
+Um but then again we have the same um problem as we saw for the molecule case.
+
+Right. We are still g is this infinite reciprocal lattice.
+
+So the problem is still infinite dimensional. So again in order to actually solve it we use Cut-Off.
+
+To truncate. That.
+
+So that is what, uh, what is actually happening inside of the article?
+
+Any question up until this point? Oh, good.
+
+Oh, clear. Very good. Okay.
+
+Now that's just, uh, that is just to revisit the self consistency move.
+
+Now that we have, um, did everything for, uh, periodic crystal.
+
+So so consistency. Um, so this is very similar to what we did last lecture, but, uh, nevertheless, let me repeat it.
+
+So we give a initial guess of electron density. And from another, we can construct.
+
+We can write the function.
+
+And then from that we solve. The chaos equation.
+
+Um, so solving the equation is what we did here.
+
+Right. That's how it's actually done in the code.
+
+Now the difference between what we did previously and now is that you see here you need to do it at each point.
+
+In the first three.
+
+also. So that's the difference now.
+
+So you have to do um the the eigenvalue problem at multiple points.
+
+Right. And then once you do that for each point you construct.
+
+New density. That is n r is some of n sum of k plus I n k r squared right.
+
+So now we have two indices. So we need to sum some up both n and k in order to get the n r right.
+
+So that's the main difference. Now of course the loop is the same.
+
+Right. So we will try to see if this is converged. then everything is good.
+
+But if not, you feed it back into the initial guess, so into the quantum equation.
+
+Construct the VCs again and the with over and over until you finally get it to self consistency, right.
+
+Let me rerun this thing. Okay.
+
+Now there's a note. Because you'll see here we are summing over all the key points as well right.
+
+And of course in DFT there is a limit.
+
+So you cannot do infinite amount of k points. And the K grade.
+
+Needs to be. Sufficiently fine.
+
+To produce. Accurate density.
+
+So. So from this. From this lecture here.
+
+Now you should understand why in the input file of Quantised parcel there, there is this k point in the input.
+
+Right. And that's where you specify how fine the k grid that you are doing.
+
+The calculation is. Um, and then this k grade has to be fine enough in order to produce an accurate density.
+
+And that is also a convergence parameter. But now you should know better why that is.
+
+Okay. Okay with that?
+
+We are actually done for this lecture. Let me summarise. So we look at the electron.
+
+So. So this lecture we talked about the electrons in crystals right.
+
+And then we hopefully reviewed the concept of reciprocal space on zoom.
+
+And we talk about the block theorem which is how the electron wave function should look like in this periodic crystals.
+
+And then we saw that by doing Fourier transformation on this block states and plug them into the equation,
+
+we can solve this for the electrons in crystals. And this gives us this n k right.
+
+So if we write that down. So the last lecture we did for molecules and for molecules we assume that the r is equal to r plus capital R, right.
+
+And then today we see that we are moving to periodic crystal.
+
+And here the condition of KR is it should look like a plane wave.
+
+Multiply this u n kr. Where you and k r has a lattice periodicity.
+
+So that's the block theorem. And then again after writing like that we can transform to matrix.
+
+Eigenvalue problem. And so with cell phone systems.
+
+So if we write all the equation. Now this has this n k r as in the indices.
+
+Of course since our poset has these indices k.
+
+The energy that we get will also have an n k right. So that's the epsilon n k.
+
+Again n is the band index. And k is the weight vector.
+
+So. So if you are familiar now this if you draw if someone out.
+
+This is a band structure. And this is something that you will be doing in the lab.
+
+So hopefully learn a bit more about it. But we will also discuss a bit more detail next lecture.
+
+But the idea is basically that, uh, you can plot the epsilon and k in this reciprocal space, right.
+
+So draw it as a function of k um. But then of course it has multiple values because of the band index n.
+
+Right. So that's where you get multiple bands. So for each k you have different energy levels.
+
+So so drawing them all together you have this electronic band structure.
+
+Um the next but next lecture we will talk more about that and we will see what
+
+kind of material probabilities we can learn from this band structure Applause.
+
+Okay. So with that, I think we're also in time today, which is good.
+
+Um, but in today's lab, you will be doing the electron implant structure calculation for diamond.
+
+Um, which should be helpful in helping you do the problem set, too.
+
+Okay, now, um, let's take a ten minutes break and we will return for the lab session.
+
+Okay. Kind of self-consistent. I retired how I.
+
+Solve the equation at each key point in the first. Uh, I hold 100 times.
+
+And you get two. You need help?
+
+Yeah. Yeah. Okay. Okay. Okay.
+
+Hey. Hey. Hey.
+
+Hey. Come here. Just eat your.
+
+Now this is usually. The case from the journey.
+
+The road. That is.
+
+The way back to the. Interior of a.
+
+Tunnel. So how can you allow this?
+
+I don't know. I just had one question.
+
+So in this one we assume like a perfect pristine crystal, right?
+
+Yeah. What happens if we have, like, defects in their design? I assume, like their potential is not going to be periodic as perfectly.
+
+Yeah. Yeah. So in quantum espresso. Yeah.
+
+If you want to do defect calculation, what you'll do is that you will still put the defect into a periodic cell,
+
+but then it will then extend across the entire. Yeah.
+
+Yeah. So so so what you are essentially doing is more like a periodic array of things, but you will not use a larger cell.
+
+Oh, so that it doesn't. You don't have a defect.
+
+Yeah. Yeah. So so this is this can also become worse. So imagine you keep increasing the cell size.
+
+Yes. This is called the supercell correlation. And then you just put one defect in this supercell.
+
+Right. But if you have a bigger cell then don't. Isn't the like.
+
+Isn't that, like, super expensive computation? Oh, yeah.
+
+Of course. That's a price you have to pay when you calculate.
+
+That's okay. Okay, I get it. Are we going to do any defects in calculation stuff?
+
+Yeah, there is a problem. Stuff on. Do you have really no weekends?
+
+Okay. Okay. Well, you're doing something perfect. Thank you very much.
+
+See you. Thank you. Oh.
+
+You're tired. Now we'll go from the restroom.
+
+Oh, I need my. Oh my God.
+
+I just had to take my cat to bed. He's so upset. Yeah.
+
+I don't know if he's move with so much of it.
+
+But he's so mad. He's like, why are you doing this to me?
+
+It makes sense why I mentioned this. Yes. Interesting, right.
+
+So most of. The natural science goes.
+
+And then. But especially that.
+
+Yeah. Yeah. So. You know.
+
+I really. Was are you trying to.
+
+I'm going to set up my timesheet. Now you listen.
+
+Did you get paid? Not yet. Every two weeks.
+
+It's not anything yet. Nothing. It takes quite a long time.
+
+That's annoying. I'm not sure you can do.
+

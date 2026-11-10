@@ -1,0 +1,1315 @@
+[Transcription générée automatiquement. Des modifications ont pu être apportées pour plus de clarté.]
+Okay. I think we can get started. Welcome to lecture three.
+
+Um, so before we start, I just want to mention the problems. That one is due today in an hour.
+
+So hopefully Aera has already submitted. Um, but if not, is there any last minute questions about the submission?
+
+Oh, good. Okay, great. Um, and the PS2 is also released on canvas, so now you have access to it should be.
+
+And this is due again in two weeks. Um, so Pisa two is about modelling monolayer boron nitride.
+
+Should be quite exciting. Um, but I think it will be able to do it after the next lecture.
+
+So after lecture four. Okay.
+
+So then let's get started. Um, from a recap of our lecture two.
+
+So in lecture two we talk about the many body Schrodinger's equation.
+
+So this is different from the single electron Schrödinger equation that we saw in lecture one.
+
+And then we said that if you just write it as the Hamiltonian then the form is this h capital psi r1 r2 to r n.
+
+This is equal to e psi r1 r2 rl right.
+
+And then the major difference is that here is a multidimensional function.
+
+So it has A3N coordinates. And that makes it impossible to solve.
+
+But the good thing is with this kind of formulation, we can actually very easily write out what H is the Hamiltonian.
+
+And we talk about there are four terms for the Hamiltonian, which is the first term the kinetic energy and no,
+
+everything is the sum of all the electrons, and second term is the potential energy.
+
+The third term is the election electron interaction.
+
+So this is summing up all the pairs. And then the final term in the nucleus nucleus.
+
+So this is something that you can actually write out.
+
+But you can also. Okay.
+
+And then we talk about the three very important conceptual leaps that made EFT possible.
+
+So the first one is the variational principle. So this one states that if you write all this f psi.
+
+Um and then if you can minimise it. Um, this should give you the ground state energy.
+
+So instead of solving the full Schrodinger's equation, you can imagine that we can turn it into a minimisation problem.
+
+Um, but of course, this is still unsolvable because of the high dimensionality of psi.
+
+Then comes the homework cone theorem. Then this states that the z is actually uniquely determined by the ground state electron density n.
+
+So this is nr. And the answer is a three dimensional quantity.
+
+So that greatly simplifies the question.
+
+And then this problem becomes that we if we can do fine and minimise it, we can again get the ground state energy E0.
+
+But at this point we don't know. The form of f and yet.
+
+Right. And then comes the quantum equation.
+
+Um so the quantum approach um, the very important idea is that, uh, they replace the interacting electrons with non-interacting electrons.
+
+And in this way, you get rid of this, uh, coupling between the coordinates of the different electrons and managed to, um,
+
+write out this FN, which again has four terms, but of course the terms are slightly different, but the first term is due.
+
+The kinetic energy. Is just out here.
+
+The side are the orbitals of the quantum electrons,
+
+so they are non-interacting instead of the capital side that we had in the multilateral Schrödinger's equation.
+
+So this is the first term the kinetic energy. And the second term is still a potential energy.
+
+Third term is the Hartree energy. So this is a classical Columbia interaction.
+
+And here you have an R interacting with in our prime.
+
+So the electron density interacting with itself to give you the Columbia interaction.
+
+And then the final term is whatever is left.
+
+So this is called the exchange correlation. Okay.
+
+So what we what did we do in the last lecture that uh derives the connection equation from this the functional.
+
+Just to test whether you still remember. Noah.
+
+Uh, here. Yeah, yeah.
+
+No homo serum replaces phosphorus isn't right.
+
+So that part we already did. Yeah.
+
+You minimise with respect to Adam, right? Yeah. Yeah, yeah that's a That's correct.
+
+So so basically we are applying the variational principle to effort.
+
+So the variational principle states that we need to minimise FN.
+
+Right. So then what we did is that we apply the variational principle.
+
+Now if you remember let me do it again. But the idea is that um we set the derivative to zero.
+
+Yeah. Yeah. So here we are actually uh minimising with respect to II.
+
+So the orbitals but then here is FN.
+
+And then there is um the Lagrangian multiplier which constrains the normalisation of the orbitals.
+
+Okay. Um, and then we can do this, uh, derivative of all these terms.
+
+Of course, everyone has four terms here. Right. As written above.
+
+Um, I'm just going to do one term here. No repeating of what we did.
+
+But, um, if you take the first term, the, um, kinetic energy, what you have is.
+
+DV prime. So just copying the first term here. Right.
+
+So this is a first term, the kinetic energy.
+
+And then um. So here you take the derivative of both the psi star with respect to the I star and also the r prime with respect to psi star ray.
+
+And then if you do this one this will give you delta ij delta r minus r prime.
+
+And then if you do this one with respect to the star this gives you zero.
+
+So this term is gone. Then you are only left with this one. And then you integrate the delta function out.
+
+And eventually this gives you a very simple formula which is just a um h bar squared over two m Laplacian psi I r okay.
+
+Um and then we did this for all of the other terms, which I'm not going to repeat.
+
+Just read it out. But basically, if you do this Delta Psi star of the second term, the potential energy.
+
+Our prime V our prime. So this is just the writing in our artery.
+
+So this part is in R and our prime.
+
+Um, this is the second. The second term in this uh FN so the potential energy and if you do this, this will give you just, uh, we are this I r.
+
+Um, and then the heart rate term. Archery term.
+
+Um, I will just write it out.
+
+So this will give you e square or eight e prime r prime r minus r prime plus I I um and this term sometimes we just write has a v h r.
+
+So this term is you can simply write it as hr I r.
+
+So h stands for archery okay.
+
+And then the final term the exchange correlation.
+
+Um this is just delta psi star e exchange correlation.
+
+Um and if you do this, this eventually give you this one.
+
+Delta r I r. And then this term we also write as VCR.
+
+So then all the terms are not very simple right.
+
+And then if you write them together you get the same equation.
+
+Which is just like this. So this is looking very similar to the single electron Schrödinger equation.
+
+Um this is equal to e I plus I r.
+
+So if some items comes from the Lagrangian part.
+
+Is the lambda part? Um, but then uh, sometimes we also see this written this way.
+
+So just, uh. Written all the V part as, uh, we consume.
+
+So this is just simplified way.
+
+Um, so we have all the potential terms into this, uh, v k s um, and then this actually looks exactly as what we saw in lecture one.
+
+Right. The single electron Schrödinger equation. So the kinetic energy term.
+
+The potential energy term. Uh but it's just that here the BCS, this is the effective potential that the electron is experiencing,
+
+not the actual potential energy, um, created by the interaction between the nucleus and the electron.
+
+Right. Um, and we should also note that when we talk about quantum electrons.
+
+They are fictitious electrons, right? So they are not the actual electrons.
+
+And in that sense. And also if and why they do not have a physical significance.
+
+Because they are the wave functions and the energies of these fictitious electrons.
+
+Um, but you can calculate. Calculate an R and E0 from them.
+
+Right. And E0 are physical.
+
+Right. Because this was derived from the variational principle.
+
+And we have proved that, um, if you have the answer that minimises this term, then you should get the ground state energy of the system.
+
+So these terms are physical. And these are also useful for us to study materials properties.
+
+Okay. So that's a recap of what we did last lecture.
+
+Um now let's go to lecture three. So this one hopefully is less uh theoretical but more practical.
+
+So so there are some practical aspects of DFT that we want to talk about.
+
+Now that we know what DFT is. And the first part is about this exchange correlation function.
+
+Also this XY term which we didn't mention yet how people are constructing them.
+
+And then the second part will be how to actually solve a connection equation on computer.
+
+Um, so this is something also helpful so that you know what happens when you run these quantum special codes on a computer.
+
+And then the third part is on pseudo potential. So this is also a very practical and widely used strategy in DFT calculations.
+
+Okay. Um, any question before we move on.
+
+Oh, good. Okay. The exchange correlation function.
+
+So this exc so so last lecture we briefly mentioned that actually the exact form is not known.
+
+So no matter what you do the XY is going to be an approximation.
+
+And the simplest approximation.
+
+Let's start with that. Um this is called the local density approximation.
+
+Or you see people who write it as LDA.
+
+Um, so what is local density approximation? Um, so we can construct the model system of just a uniform electron gas.
+
+In free space. So this is something we know how to do.
+
+Um, so we did it in the first lecture, right?
+
+Um, but the difference is that, of course, in the first lecture, when we derive the plane wave that was only for single electron Schrodinger equation.
+
+But here when we talk about uniform electron gas, um, we are talking about the multi electron Schrodinger's equation.
+
+So this is more complicated than what we did in the first lecture. This is not something that, uh, you can do analytically.
+
+Um, but the idea is the same. So so we see in this free space there is a constant or it's zero.
+
+And of course with that an R is also a constant.
+
+And that's it. This is just equal to n where n is a constant.
+
+And for this system, even though we say that we are going to do the many electron Schrodinger's equation version for those four for this system.
+
+Um is possible. To solve the many electron Schrodinger equation.
+
+Um, so the method they use to break this, uh, dimension explosion problem is called a quantum Monte Carlo.
+
+So we won't go into detail into that.
+
+But, uh, you can think about this as you're trying to use the Monte Carlo method in order to tackle this dimension for high dimension problem.
+
+But in the end, you can actually solve this main electron Schrodinger equation for this uniform electron gas.
+
+And what you get from this is an E0 as a function of n, right?
+
+Once you solve it. Um, and then from that.
+
+So so of course E0 has what's hard.
+
+So what does E0 consist of here. Any idea.
+
+Okay, so this is similar to what we did previously with the Hamiltonian of the many electron system.
+
+So of course it should have the kinetic energy. There is no potential energy right.
+
+Because the potential is constant here. But then there is still the electron electron interaction.
+
+Because here we are solving the many electron Schrödinger equation.
+
+So maybe let me also write this down.
+
+So this should have the kinetic energy. Um plus Hartree energy uh classical economic right.
+
+And that is only the exchange correlation. Right.
+
+Three parts, no potential energy because it's free space.
+
+Then to get this, uh, so, so we want to get the exchange correlation, right.
+
+Then what we want to do is just subtract the kinetic energy and the heart rate energy from E0 and that will give you the exchange quotation.
+
+So let me also write that down. Subtract the kinetic and Hartree energy.
+
+And this in the end gives you this, uh, correlation free space.
+
+So F stands for free space as a function of n, where n is a constant rate and is this electron density in the free space.
+
+So this is solvable. Then of course in real material system the potential is not a constant right.
+
+And R is not a constant. So how do we get the actual x from this.
+
+Um so this is a let me write it here.
+
+Real Materials. That's the local density approximation.
+
+So. So imagine if I draw the inner of a real material system, even though I draw it very badly.
+
+But you get the idea. So say we have some nucleus, right?
+
+And then maybe close to the nucleus, we have higher density away from the nucleus we have lower density.
+
+So in the end you have the density which look like this.
+
+Okay. So so these these curves represent the inner the distribution of the electron density.
+
+So this is not a constant in real materials right. So what LDA does is LDA assumes.
+
+He has sea of electrons. In volume.
+
+Element dv at position.
+
+R is the same. As if those electrons.
+
+Were in a uniform.
+
+Derived from gas. Electron gas.
+
+Where is constant. Density.
+
+So? So what does that mean?
+
+So say I mean I have this point r0 and this point r0 has um, let's take a volume element DV and this has a density of near zero.
+
+Right. And then we are saying that we assume that the x of this small volume element will be equal to, um,
+
+the, the the exchange correlation energy of a uniform electron gas that has this density of n r0.
+
+Right. And similar at all the other volume elements.
+
+So this is say this is in R1. Then R1 will contribute as.
+
+Let me write it better. R1.
+
+So then R1 will have the same exchange energy with n equal to an R1, right?
+
+So just replace them with the uniform electron gas exchange correlation.
+
+So if you write this out this can be written as x n or c.
+
+This is equal to ev epsilon x z free space.
+
+Right. So so this epsilon x a free space is what we already calculated from the uniform electron gas.
+
+And then you just plug in the density distribution in R.
+
+And then you do an integration from that to get the total exchange correlation energy of the system of a real material.
+
+Right. Um any question.
+
+I mean, I use it in the same way so that it's not so.
+
+Everything is consistent. Nah, this is our.
+
+So that's called the local density approximation.
+
+Right. So so that means that this this e x z.
+
+Here we are written out. This only depends on the local density.
+
+Right. As long as you know what the local area is you you get it.
+
+Um, so that's why it's called the local density approximation. But then you can imagine, um, there are more there can be more complicated methods.
+
+Right? Um, and of course, let's say beyond LDA.
+
+Um, there is what's called GA. So Generalised.
+
+Gradient approximation. So these are all approximations right.
+
+Because we don't know the exact form of the exchange correlation.
+
+Um so this is called GA. And their your x is not only a function of n but also the gradient of em.
+
+So that's why it's called the generalised gradient approximation. Right. So so here as you see we only need to know n r right.
+
+Is it only depends on the local density.
+
+But then for GA we are saying it not only depends on the local density but also depends on the gradient of that local density.
+
+Right. So that's um gj. But then you can imagine you can even add more terms into it.
+
+Right. So there is the method called the method GA Um, where the exchange correlation function is.
+
+No, not just a function of n and delta n, but also uh, this parameter called tau which is written as this.
+
+So this is kind of like a kinetic energy term. So that's even more complicated than GA method.
+
+Um, so we should mention that LDA, even though it's very simplified, it actually works quite well for certain systems.
+
+And uh, these are, first of all, materials with strong bonds.
+
+So that includes, are covalent. Ionic.
+
+Metallic. So for these systems out there actually already works quite well.
+
+And then also for certain material properties, um, it could work quite well.
+
+So predictions of, uh boundaries.
+
+Uh, elastic constants. Vibrations.
+
+Etc.. Um, so these are some properties and systems where LDA works well.
+
+Um, but of course it's not universally good.
+
+So there are some circumstances where it's not so accurate.
+
+So it's not accurate for Fund gaps.
+
+And also weakly bonded materials. So.
+
+So that. So for for these for these problems or for these systems we will need to.
+
+Think about other functionals which you can use. Right. Um so so these methods that we focus over are still called like a semi local methods.
+
+And beyond that there are more expensive methods. So one of them is called hybrid functionals.
+
+So we just briefly introduce that.
+
+Um so what hybrid functional does is that it's separate Youll see the exchange correlation into the exchange and the correlation,
+
+and therefore this exchange part is replaced with a more accurate formulation.
+
+So we replace a fraction of.
+
+X with A was called the Hartree-Fock.
+
+Exchange. Um so if we if you want to write out the Hartree-Fock exchange,
+
+this is actually going back to the Hamiltonian of the electron Schrodinger equation in terms of.
+
+Now we are going back to summing up all the electron electron pairs.
+
+And let me write it out. So.
+
+So this is still like a electrostatic interaction, right?
+
+But now instead of just having an are we are going back to having the orbitals and uh, summing up all the different pairs.
+
+So this allows you to account for the anti symmetry when you exchange the electron orbitals.
+
+So that's why it's called the exact exchange.
+
+Um and then what the hybrid function does, why it is called hybrid is because um so part of it is still the normal DFT like the LDA or GA.
+
+The correlation part is still not changed. And then it replaces a fraction of the original DFT exchange with the heart rate for kicks change.
+
+So this fraction is the parameter r for here.
+
+So so a part. So so a fraction alpha of the original DMT exchange is subtracted and that one is replaced by the Hartree-Fock exchange.
+
+So alpha here is called the mixing parameter. And the I don't know if you have heard.
+
+So one of the most commonly used hybrid functional is called BPP zero.
+
+So this is just the normal PB but adding a fraction of 0.25 the Hartree-Fock exchange.
+
+So this is a default uh mixing parameter. Uh Whatever function those are for is that if you look at them, they are much, much better for bandgap.
+
+But they are much, much more expensive. They are like almost an order of magnitude more expensive than these semi local DFT methods that we have seen.
+
+So. So unless you really need them, usually we don't use them that much.
+
+But of course there are some other properties where you really need them, right?
+
+And in that cases you need to go to these, uh, very expensive, uh, uh, methods.
+
+Um, another part that we should talk about is the one the loss.
+
+Functionals. So so one of us interaction is important also for some material system.
+
+So these are like layered materials.
+
+Or molecular. Molecular crystals.
+
+And also bio materials. So so there are some systems where you have to consider the van der Waals interaction in order to get them accurately.
+
+So there are also methods that does that. Um, so one group of method is adding like a dispersion correction onto the Eigen G.J. or LDA methods.
+
+So so one very widely used one is called the grime v3 Fraction.
+
+You can imagine that this is an extra term that you add to the functional in order to correct for the random words in action.
+
+But there are also methods where they try to build in the one that was interaction into the function itself.
+
+One such function is called the vw df, so this is another method that tries to include the interaction into the into the function.
+
+So uh, so in literature sometimes you see this plot which is called the Jacob's ladder, um,
+
+which says like the lowest of this Jacob's ladder is like LDA, which is the simplest approximation.
+
+Right? And then as you go up, you are going to more and more complicated methods.
+
+So here we have talk about right. So GA GA.
+
+They are trying to include the gradient or um the kinetic energy term.
+
+And then we have hybrid functionals. So they are much more expensive.
+
+And then they are even double heavy functions and so on and so on.
+
+So you can imagine that there are this the hierarchy of the complexity of the functional, which in principle would eventually give you heaven.
+
+So that's the chemical accuracy.
+
+Um, but I find this kind of thought sometimes a bit, uh, um, misleading because it seems to suggest that as long as you climb up,
+
+you climb up this ladder, the results will improve uniformly, right?
+
+But this is actually not the case. For example, we talked about for metals, LDA already works quite well, so you actually don't gain much benefit.
+
+Uh, moving on with more complicated methods.
+
+So? So that's something you should keep in mind. Uh, so so, so in this figure on the left, these are the groups, the categories of these functionals.
+
+Right. And then on the right these are some names of the different flavours of these functionals.
+
+Um so so for example here we have PV zero.
+
+But then there are other methods which try to uh mixing the folks exchanging different fractions in different ways.
+
+So so don't worry about remembering the names.
+
+Just know that these are. So there are many different flavours for these different types of functionals okay.
+
+So developing uh exchange correlation functional is actually still a very active field.
+
+Um, in, in the community, uh, especially these days, as you can imagine now we are heavy on machine learning and AI,
+
+and these models are a lot of them are trained on DFT data.
+
+Right?
+
+And then if you imagine you give some not so accurate data obtained with nozzle accurate functionals, then what the model predicts is also not useful.
+
+Right? So now there is a even higher demand to develop these functionals that work universally for different groups of materials.
+
+So this is something that people are still actively developing.
+
+And this is actually also something that I have worked on a little bit in my research.
+
+So this is a figure from a paper of mine, um, where we were trying to find out the accuracy of predicting band gaps of these different functionals.
+
+So we had a list of materials which is shown in this table on the left.
+
+so across different sides of the band gap.
+
+And then if you do this kind of flow. So the y axis is a calculated band gap.
+
+And the x axis is the experimental band gap. So what we use as a benchmark.
+
+So a perfect function would lie on this. Uh yeah y equal to x y.
+
+Um, so that's the dashed black line here.
+
+But then of course, you see um, if you look at PB which is this purple line here.
+
+So PV is a very popular flavour of gay functional.
+
+And then they are universally underestimating the band gap.
+
+Right. So that is a known uh failure of these semi local uh DFT functionals.
+
+And then if you look at PB zero. So this one we talked about this has an R5 equal to 4.25.
+
+And this is a brown line here. So Brown is shifted up from the purple line right from the PB.
+
+So that's what you get when you add this focus change it increases.
+
+It opens up the band gap. So that makes the band gap prediction much more closer to what we expect from experiment.
+
+But of course the improvement is not universal, right.
+
+So for some of these materials with smaller band gaps, um, they are now overestimated.
+
+And then for some of these materials with large band gaps they are underestimated.
+
+So that's the so as you see, even higher functional such as PB zero,
+
+it can fail for some materials depending on which property that you want to calculate.
+
+Um, so in this paper we were trying to develop new ways of how to determine the,
+
+the parameter, the mixing parameter in order to make it more accurate.
+
+Right. Okay. So I think we can take a break. Now we have uh so far discussed all the different, uh, functionals.
+
+Um, but as you can see, this is a more like a practical aspect of DFT, right?
+
+So just the, you know, have an idea what these, uh, names mean, um, that will help you in, for example,
+
+if later you read the DFT data, uh, DFT paper, then you know what people are talking about.
+
+Okay, so now let's take a ten minutes break and then when we are back, we will talk about how to solve the equation on computer.
+
+Okay. Wow.
+
+What is. The.
+
+Variational principle. Principle.
+
+Goals. Minimise. Minimise.
+
+The derivative. Erosion minimisation process. Minimisation.
+
+Apprehension. Expectation. Value of Hamiltonian. Functional.
+
+Average ego. with that either? Oh.
+
+I told you that the derivative of zero. Um.
+
+The ground state. Okay.
+
+As opposed to on the top of the ground state.
+
+Yes. Oh, Oh, good.
+
+For you. Oh, um. To wash hydrogen.
+
+Did you know in the Bronx, the Jewish.
+
+Tradition in the ground state that everyone is. Occupied by electrons.
+
+Okay. Aha!
+
+So you get down to the ground. System?
+
+Yeah. So you're a hybrid. How?
+
+Are you doing? Oh. Right.
+
+Great. Mhm. Oh. Um, one of those interactions that the TV.
+
+The TV. Yeah.
+
+I don't know. Well.
+
+I mean, I. I only.
+
+Want you to see if you look. At me.
+
+I don't see That's why.
+
+I opened the window. We all know. That kind of thing.
+
+I'm sorry. What?
+
+Are you talking. About.
+
+I don't. Know.
+
+Would. You. Like my.
+
+Mom. Would you do.
+
+That. Yeah. Yeah.
+
+Yeah. Yeah. Yeah. Yeah.
+
+Amen. Amen. Amen. Amen.
+
+Amen. The Lord. Amen.
+
+It's a long. Time. No.
+
+No. No.
+
+No. No. No. No.
+
+Yeah. Oh.
+
+Yeah. Oh! Come on.
+
+Okay. I think we can restart. So.
+
+How to solve an equation on a computer. So to discuss this question, I wrote out the equation that we had again.
+
+So first term the kinetic energy. Second term potential energy.
+
+Third term the heart rate energy. And fourth term the exchange correlation energy.
+
+Right. So this is the equation that we need to solve in order to find out these.
+
+But there is a problem which is if you remember to get an R.
+
+So the electron density what we did is that we were oh sorry this is not here.
+
+So. So we were summing up doing an integration of all the psi or psi j.
+
+Right. The set of all the electrons that we have. So meaning that before solving this equation we don't know psi.
+
+And then without knowing because I, we don't know nr right.
+
+Because now I need to be calculated from. But then, if you don't know, we can now write all this equation.
+
+Right? Because they are terms that include PNR. And these terms we don't know what it is.
+
+So these ones that I circled in red. We don't know what is actually is.
+
+Without knowing PNR right. So that's a problem.
+
+Does anyone know how you have to solve this.
+
+Yeah. What was DV.
+
+Yeah. The second erasing PNR.
+
+So so if you write an R then there is another integration in PNR, right?
+
+Like if you write an R here there is only. So one integration is here and the other integration is in R.
+
+So if you expand it, then you have two integration. Yeah.
+
+Any idea how this can be solved? So kind of we don't know the solution.
+
+So we don't know the equation. How can you solve this.
+
+No. Okay. Yeah. An effective exchange potential.
+
+What do you mean? So, I mean, typically that term is just collected into, like the exchange.
+
+Right. I guess that's not helpful in terms of actually describing what it is, but, um.
+
+So, so the exchange correlation function, such as, um, the LDA, we can actually write out.
+
+Right. So this is this equation here. So in order to calculate that you still need to know an R right.
+
+So it's an integration over. So? So that doesn't solve the problem yet.
+
+But okay, that's then let me tell you.
+
+How do we do it. So so the method that we use is a iterative method.
+
+Um, but first of all let me just erase this.
+
+We don't need that. This is just a reminder of the question.
+
+So so what we use is a iterative method.
+
+Or sometimes you also call it uh self consistency loop this.
+
+Loop. Um, so I guess you see that in the code sometimes you see LCF, right.
+
+What is this. So this is the self consistency. So how is this, uh, iteratively solved.
+
+What what's the code actually does. So this is what the code does when you run quantum espresso.
+
+Is that first the given initial guess of nah.
+
+So we don't know. Right. But we can have a guess.
+
+And then once you guess an R, you can write out the exact, um, formulation of the heart rate term and the exchange correlation term.
+
+Right. So so let me write it again. The hardware term is this the v prime um r prime r minus r prime.
+
+And then the vaccine r.
+
+So that's the exchange correlation as we saw in the in in LDA that's integrating the local density.
+
+Right. So then with this initial guess we can write this equation out.
+
+Right. So so with that terms now we have the VCs r which is again um we are plus h plus v XD then we can solve it.
+
+Right. So so. So this one.
+
+And then once you solve it you have the right.
+
+So then you can construct an R as the sum of the all the.
+
+Yeah. Then what do you do. How do you make it in the loop?
+
+Um, of course, that's what actually the codes do.
+
+But now we are talking about how to finish the loop.
+
+Close the loop? Yeah. When you obtain density back into the heart rate.
+
+Yeah. Yeah. Yeah. So so that's that's what's actually done.
+
+So let me change the colour. But now you have a new layer right.
+
+So so so remember that when we started solving this we give an initial guess of Na that gives us a set of Z.
+
+And then we can get the new R with this set of Z right.
+
+And then what you do is that you will check if the Ode density is equal to the new density.
+
+Right. So this is a condition that one can check. And if not, what you do is that you do again, right?
+
+So use this new law that you obtained back to here to construct the V terms with this new law.
+
+So everything again and then check. Right. So so that's why it's called iterative method.
+
+Um but then if the old density is already good.
+
+So that's converged right. Then we say this is a converged.
+
+So consistency. Achieved.
+
+Right. So so so in the end what we will get is that, uh, Your Honour and your se.
+
+So the, the solution of the equation that you're getting, they are consistent, right?
+
+In this way, they are solving this problem.
+
+So, so because of this, uh, um, difficulty that we talked about in the beginning because these vague terms actually depends on an ah.
+
+Uh, you need to do this iteratively. Right. So this is called the fail consistency loop.
+
+Um, but this is like a big frame. Of course, there are a lot more details about how the code actually does it.
+
+Um, which we are going to talk a bit more about now.
+
+So one of this is, of course, uh, this step.
+
+Right. So with this self-consistent loop, of course, we know every term of this equation now.
+
+But then how does the code solve it? Um, so this is something that we want to talk a little bit about.
+
+Um next. But, but um Aaron gets this self consistency idea.
+
+Is that clear. Any question. Yeah.
+
+How do you know which value is actually given? Yeah. You mean the convergence criteria?
+
+Right. How to determine if convergence is reached. So?
+
+So what you do is that you take the difference between the old density and the new density.
+
+So that will give you a difference. Right. And then the convergence criteria would be that that difference should be smaller than a certain number.
+
+So that number is something you can set in quantum espresso calculation.
+
+That's a there is a tag that says it. If you look at actually if you look at the output of quantum espresso you'll see this iterative process.
+
+You see that the program is actually running it again and again, then checking how different the result is until it's converged.
+
+So this is something you can you can see in the program output.
+
+All right. Very good. So now okay about how actually so to solve this equation.
+
+Um, we will start with the simple system. Which is, uh, a molecule could be any molecule.
+
+But in the lecture notes is N2 molecules. Let's say some N2 molecules.
+
+Um so so QE is a plane wave based method.
+
+Somehow I cannot write on this corner. So plane wave based method.
+
+So that's that's the foundation of what what we are going to talk about.
+
+Um, but but just remember that there are other methods that don't use plane wave for this.
+
+Um, but QE is a plane wave based one.
+
+So what plane wave based method really does is that it's putting your material system under a periodic boundary condition.
+
+So what does this mean. So it means in your simulation your input file contains two, uh, atoms.
+
+Right. Let's say this is your own two atom and you put it in a box.
+
+Right. So that's what you said in your input file.
+
+Um, but what the code actually does is that it imposes this periodic boundary condition as if there are repeating cells with the same setup.
+
+So that's the periodicity. So that's what's what's actually running in the code.
+
+Um, and say this is a right. So the this is this is a cubic lattice.
+
+That we sell that you are putting a molecule in, and then it has this lattice of a, um, then why does it why is it called a plane wave based method?
+
+Um, so it's called plane wave based method because we are going to expand the solution of the equation into the plane wave basis.
+
+And what that means is um, so let me write this out first.
+
+So periodic boundary condition um would require psi r.
+
+So. So this is for just one direction in the x direction for example.
+
+Right. So so for this molecule, since we are putting the system on a periodic on the condition,
+
+you can imagine that we will constrain the PSI to also have the same periodicity, right?
+
+Meaning that if you translate it by axe, by one zero lattice, you should retrieve what you got there.
+
+Right. So that's the periodicity. Then what you can do is that we can expand.
+
+So do a Fourier expansion. Because our Persi is a periodic function.
+
+If we do follow expansion it can be expressed as.
+
+Let's say this is some of g c g e I g.
+
+R right. So so this is a familiar plane wave.
+
+Hopefully a familiar plane wave. And we are saying that we are trying to find the site, right?
+
+And the way we are going to find it is by first expanding it into a sum of all the playing waves,
+
+and then we will be trying to find out the expansion coefficient.
+
+CG right. Hopefully.
+
+That's right. And now what values can g take.
+
+G take. I guess someone should know.
+
+How do we do this? Yeah, I can make an educated guess on it.
+
+Right. So you're considering this in, like, a almost like a square lattice type thing?
+
+Yeah. So it's just going to be the reciprocal lattice vector. The square lattice.
+
+Yeah. Yeah. That's, uh, that's much more at advanced.
+
+We will be talking about that in the next lecture. So about the reciprocal space and brain zone and everything.
+
+But, um, here we are just, uh, trying to do it in a simpler way.
+
+Right? So we said that we are constraining the wave function to have the same periodicity as our lattice,
+
+and then we are expanding it into this Fourier expansion.
+
+Then what you can do is that you can you can insert this Fourier expansion back into the periodic boundary condition.
+
+Right. And what that gives you. So just putting this back into this equation would be some of g c g e I dot r plus a x.
+
+This should be equal to some of g c g e I g r.
+
+Right. So that's just a substituting psi with this Fourier expansion.
+
+And then you arrive at this. Then of course what you get is there are only difference by this I g x term right.
+
+So then it should give you e I g dot a x.
+
+This should be equal to one right. Because the left hand side and the right hand side are equal.
+
+And of course then you get g dot x should be two pi multiplied by integer right.
+
+So so that's that's how you can get one from the G.
+
+And uh, if you read this uh, so let me just write this integer as an x.
+
+Right. So that's gonna be an integer. Then you get g.
+
+X is just equal to two pi a x x.
+
+So that's what you are getting. So that's that's how.
+
+G is a constraint then.
+
+So so so so so then we know that g takes these discrete values right.
+
+We know what values can take. What do we do next.
+
+So again we have v k as r.
+
+Let me put this. So the equation that we are solving is again the same equation.
+
+K s r plus I equal to right.
+
+Right. And then we said that this is a periodic system.
+
+That means our VCRs should also be periodic. Right.
+
+That follows the same logic as what we did with Persi. And that means we can also do a forward expansion on VCs.
+
+And that should have the same constraint as what we derived from foresight, right?
+
+They have the same periodicity. So that means we can also do foral expansion on VCs.
+
+And that is VCs is equal to some of g vg e g dot r.
+
+So that's the case potential. Now we can plug in everything.
+
+Both both this one. The let me read it again right.
+
+So VCs we write out this and say we write that.
+
+So let me just From now on, meet the eye.
+
+Right. So? So that should be fine. But. So our bazaar.
+
+Is this some of g c g e I g dot are all right.
+
+So hopefully that's clear because both prosaic here is uh, both speakers and Persi should have the same periodicity of our cell.
+
+So both of them can be fully or expanded.
+
+And they share the same set of G. Right. Because the, the periodic the periodicity is the same.
+
+So then you can plug both of these terms in here.
+
+So this plug in here this plugging the right plug in plugging both of them into the equation.
+
+Let me write it down. Plug into chaos Equation.
+
+So what do you got? So let me still write.
+
+Term one. Term. Two. Term three. Right.
+
+Three terms in the connection equation. So term one.
+
+Is just a sum of g h bar two um g squared c g e I g r.
+
+So. So term is taking the Laplacian of psi right.
+
+And then when you take the Laplacian of the exponential. You get the minus one.
+
+Then minus one minus one is one. So you lose a minus sign.
+
+And then you get a g squared right. That's taking the derivative on the exponential twice.
+
+That's the g squared. But otherwise it's just a provide parking, right?
+
+That should be easy. Then term two.
+
+Let me do term three. First, because term three is also easy. Right? Turn three is just a sigh.
+
+Times reason why. Where and why is of course a constant.
+
+So this is epsilon sum of g g e I g r right.
+
+So that's again just plugging in the forward expansion into term three.
+
+Then term two is a bit complicated right. Because you are multiplying the VK as an plus size.
+
+So you're multiplying these two for expansions. So so then you get some of the key prime.
+
+Now there are two sets of summation right. And you are multiplying them together with g c g.
+
+e I g plus g prime dot.
+
+Ha. Right.
+
+All clear. So that's just plugging in the four expansion into the three terms in the quantum equation.
+
+Right. So now again how do we find the VGS g.
+
+So that that does still do a little bit of tricks.
+
+So so one trick that you can do is if we write um g double prime equal to is equal to g plus g prime then our second term.
+
+So then our g will be equal to g double prime minus g prime.
+
+Um so then our second term will be can be rewritten as some of g double prime some of G double prime minus G prime.
+
+C g prime. R v double prime.
+
+Minus g prime. E I g.
+
+Double prime. Delta. So the good thing is now we want to replace this summation term with the single G term.
+
+That's why we do this transformation to put the g double prime which is equal to g plus g prime.
+
+And then you rewrite because because the double prime is only a symbol.
+
+Right. Now you can rewrite it back to to G.
+
+And that will just give you a.
+
+Sum of g sum of g g c g.
+
+Prime we g minus g prime e I g r.
+
+Right. So then this term plus this term should be equal to this term.
+
+Right. And all of them has summation of g meaning that um for a specific g this term should be equal to each other.
+
+Right. Then we can get rid of the summation. And then of course all of them share this e I g r term.
+
+This can also be gone right. Then if you write them out this gives us the final equation which looks like this h bar over to m g
+
+g squared minus epsilon c g plus some of g prime three g minus g prime C g prime is equal to zero.
+
+Okay. So. So it looks a bit complicated.
+
+What we are doing is actually very simple. So we did for expansion on both VCs and Persi.
+
+And we plug them into the equation.
+
+And then uh, you do some of numerical tricks and then try to delete all the terms that are shared between the three.
+
+Right. And eventually that leads you to this equation, which is much simpler.
+
+But then, uh, I guess some of you should know how to solve this already.
+
+Right. So, so so VG is known where G is not something we are going to solve.
+
+We are only trying to solve c g. Right? And this is actually just a matrix eigenvalue problem.
+
+So if I write this out. This can be written kind of like just uh h g is equal to RHC.
+
+Sorry. So. So imagine you have a vector of C.
+
+Then what you get is H. C is equal to epsilon c.
+
+So that's a matrix eigenvalue problem. And that is very easy to solve.
+
+So here C is a vector of c g.
+
+Matrix. I got it. Right.
+
+Um but then there's still a problem. Because if you write like this, what's the dimension of C?
+
+Like how many dimensions you should have? Yeah yeah yeah yeah.
+
+Good, good. So. So if you look back, we said that the chick would take these values.
+
+Right. And then there is no limitation of how what we take.
+
+Right. So n is um so so g is in principle infinite.
+
+So so that's when you do a four expansion, right. In principle you are summing up all the way to infinity.
+
+Um, but of course that's not something you can do numerically right, in practice.
+
+So what the codes do is that they introduce a Cut-Off.
+
+And that allows you to only keep the g values that are smaller than a certain energy Cut-Off.
+
+So the energy Cut-Off, this is also a convergence parameter.
+
+Um, and this is something that you can set in the quantum espresso um input file.
+
+Right. Um, so I should mention that, uh, remember in the beginning I said this.
+
+So what we are doing is called plane wave based in terms of we're expanding everything, um, with a plane wave.
+
+Right. And this is not the only method. So there are other methods you can imagine.
+
+You can expand your wave function as different orbitals as long as it forms the basis set right.
+
+Um, but then, of course, there is a certain advantage of using the plane wave based, which is actually one of the most popular DFT method.
+
+Um, and first of all is that you can imagine you are so you can systematically improve the accuracy by just the increase in e e-cards.
+
+Right. So just by increasing the energy Cut-Off, you're including more brainwave basis sets.
+
+And that guarantees that at some point you should reach convergence.
+
+Right. So there is a systematic way that you can converge your calculation.
+
+And then the second is of course is naturally very compatible with the periodic boundary condition which is a natural boundary condition for solids.
+
+Right. Because we know that that solids are periodic. Um, so so these are the benefits of plane wave based methods.
+
+Okay. Now one last point of today, hopefully a bit easier, which is pseudo pleasure.
+
+So so I have to know we didn't talk about the difference in the different different electrons.
+
+But as you can imagine the the electrons that are closer.
+
+So the electrons that are having lower energy. They are more localised close to the nucleus.
+
+For example, one s orbitals produces p and f and so on.
+
+Um, and in the FDA there is a very widely used uh approximation, which is that for these, uh,
+
+electrons that are inner electrons or sometimes we call them core electrons, we don't solve them.
+
+We combine them with the nucleus. Um, so let me write this.
+
+So the idea is that we will combine nucleus and core electrons.
+
+So the inner electrons. Into an effective potential effective nucleus.
+
+Whose effect? On the valence electrons.
+
+So now we are separating the electrons into.
+
+Core electrons and valence electrons is described.
+
+By pseudo tension. So this is what this figure here is trying to plot.
+
+So so originally is the blue line right.
+
+So you have uh the potential for the nucleus.
+
+And then you have some inner electrons, for example, this one here which is heavily localised.
+
+Right. So, so that's our original plot with the nuclear nucleus and the core electrons separated.
+
+And the idea of the pseudo potential is that now you combine the potential of the nucleus and the electron into this pseudo potential,
+
+which is this v pseudo here. And now you can see that this is a much, much more smoother close to the nucleus and then away from the nucleus,
+
+it retrieves back this one more behaviour of the original V, right.
+
+So that's the idea of the pseudo potential. So the great advantage then is that now you don't need to describe these inner core electrons anymore.
+
+Right. So advantage. First is need to deal with.
+
+Fewer electrons. Because now the core electrons are described by an effective potential.
+
+And another big advantage is that now you can use a lower Cut-Off.
+
+Because as you see, these core electrons, they are very localised, right?
+
+Meaning that they have a large curvature close to the nuclear core area as shown here.
+
+And that means to describe these core electrons, you will need the higher orders of Fourier expansion.
+
+Um, but then after you do this effective summation to get this value, this one can be described with much less, uh, much smaller energy Cut-Off.
+
+Right. So that's a main, uh, advantage of using a pseudo potential.
+
+Um, so we will also talk a little bit of how to construct a pseudo potential.
+
+Let me. So, so the way it is done, we will not go too much into detail.
+
+Just to give you an idea, is that, so?
+
+For each isolated atom, you calculate the o electron.
+
+Calculate k as wave functions.
+
+And k as energies. Was O electrons.
+
+Um so the keyword here is all electrons. So uh that's it.
+
+This we read as an e meaning all electrons.
+
+Then what you can do is that, uh, you try to solve the equation with only valence Electrons again for isolated atom.
+
+For valence. For only valence electrons. With the effective nucleus.
+
+So. So that's an idea of how you can construct the pseudo potential.
+
+Um if you write that out that would be something like if you just write how the quantum equation.
+
+Plus the pseudo. So. So instead of having the previous V which is a nucleus uh potential, now we have the v p which is pseudo potential.
+
+And then this will give you psi. Which is equal to epsilon p p p p r.
+
+Right. And here you only solve for for the valence electrons.
+
+So you solve for v p r um.
+
+And then the way you are going to do that is that you,
+
+you try to find a v r which satisfies that this epsilon ppr should be equal to the epsilon GPA right.
+
+So that should be equal to the um to the to the energy levels when you do the electron calculation.
+
+And then this psi ppr um this should now be identical to the electron.
+
+Right. But in region where bonding happens.
+
+This should be. Equal to sir or.
+
+Yeah. So so here should all happen in order to be consistent.
+
+So that's the idea. Right. So so that's that's exactly what this plot is showing.
+
+Right. So away from the nucleus is where the bonding is happening.
+
+And there once you get the wave function you get from the pseudo potential should be equal to the all electron wave function,
+
+but close to the nuclear core. It is replaced by this effective potential.
+
+Right. And then once you solve over this is something that is again an input file of quantum espresso.
+
+And then you can use this uh constructed wave PPR for Calculations.
+
+Right. So that that saves the step of considering all the electrons.
+
+Um, so. So in quantum effects of input, uh, this is something you did in the problem set.
+
+But these are defined by the this dot UPF files.
+
+And if you look at the input file it is here. So in principle here you have a list of the elements you have.
+
+And then after each element you specify the file name of the pseudo potential of that atom.
+
+So as you can see the pseudo potential is also functional dependent.
+
+So PZ here is uh is is a flavour of LDA.
+
+And then when quantum is trying to raise that it knows that okay this is generated from LDA.
+
+So I will use LDA. Um but in the problem set you probably also try to use HPB.
+
+So that would be a PBE functional. Um, and then um also will use PB to do the calculation.
+
+And here are some websites where you can find libraries of these suitable thresholds.
+
+And that will allow you to do the calculations of whatever, uh, material that we want to do.
+
+Okay. Then we are just in time. Today we learned the exchange correlation function.
+
+And we talked a little bit about how to solve the quadratic equation on computer.
+
+So we will actually come back to this question again later.
+
+And then the last part is on the potential which is of course very critical practically.
+
+Um, so just to give you a brief, uh, spoiler of what we are going to do next lecture.
+
+So. So here we were talking about.
+
